@@ -1,8 +1,8 @@
 import { Box, Button, Center, Input, Select } from "@chakra-ui/react";
 import React from "react";
-import { ComEthContext } from "../../App";
-import { useContext, useEffect, useState } from "react";
-import { Web3Context } from "web3-hooks";
+//import { ComEthContext } from "../../App";
+import { /*useContext,*/ useEffect, useState } from "react";
+//import { Web3Context } from "web3-hooks";
 
 const SubmitProposalForm = () => {
   //   const [web3State] = useContext(Web3Context);
