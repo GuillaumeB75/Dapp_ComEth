@@ -1,4 +1,4 @@
-# ComEth
+# ComEth DApp
 
 [![built-with openzeppelin](https://img.shields.io/badge/built%20with-OpenZeppelin-3677FF)](https://docs.openzeppelin.com/)
 
@@ -20,7 +20,15 @@
 - testnet use : Rinkeby
 - **ComEth dApp**
 
-  This repository contains a React project for our DAO-like ComEth dApp using the Ethereum Blockchain. There will be a "ComEth Factory" allowing a user to create a personalized ComEth project according to its own needs. Each ComEth gathers users who have common interests and offers them tools to organize their activity in a entirely decentralized way, including voting and managing the Ethers of a common pot.
+  This repository contains a React project for our DAO-like ComEth DApp using the Ethereum Blockchain. There will be a "ComEth Factory" allowing a user to create a personalized ComEth project according to its own needs. Each ComEth gathers users who have common interests and offers them tools to organize their activity in a entirely decentralized way, including voting and managing the Ethers of a common pot.
+
+---
+
+## Diagram's architecture (contracts interactions)
+
+
+![Diagram-architecture](./Diagram-architecture.png)
+
 
 ---
 
