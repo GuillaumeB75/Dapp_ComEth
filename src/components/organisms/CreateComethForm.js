@@ -101,7 +101,7 @@ const CreateComethForm = () => {
     <>
       <Box boxShadow="dark-lg" w="35rem" rounded="lg">
         
-          <Box padding="1rem">Explication sur la création d'une communoté Ethereum</Box>
+          <Box padding="1rem">Explication sur la création d'une communauté Ethereum</Box>
           <Button boxShadow="lg" onClick={handleClickCreate} margin="2rem">
             Create your account
           </Button>
