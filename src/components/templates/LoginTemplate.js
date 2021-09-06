@@ -1,12 +1,12 @@
 import { Button, Input, Heading, Container, Center, Box } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import {  ComEthAddressContext } from "../../App";
+import {  ComEthAddressContext } from "../../context/ComEthAddressContext";
 import { useState , useContext} from "react";
 
 const LoginTemplate = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const comEthAddressContext = useContext(ComEthAddressContext); 
+  const {setComEthAddress } = useContext(ComEthAddressContext); 
 
   return (
     <>
@@ -32,7 +32,7 @@ const LoginTemplate = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <Link to="/home">
-            <Button margin="2rem" boxShadow="lg" onClick={comEthAddressContext.setComEthAddress(username)}>
+            <Button margin="2rem" boxShadow="lg" onClick={setComEthAddress(username)}>
               Join Community
             </Button>
           </Link>

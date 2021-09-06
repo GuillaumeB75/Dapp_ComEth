@@ -6,18 +6,18 @@ import {
   FormLabel,
   Heading,
   Select,
-  useToast,
+  //useToast,
 } from "@chakra-ui/react";
-import { ComEthContext } from "../../App";
-import { useContext, useEffect } from "react";
-import { Web3Context } from "web3-hooks";
+//import { ComEthContext } from "../../context/ComEthContext";
+//import { useContext } from "react";
+//import { Web3Context } from "web3-hooks";
 
 const VoteTemplate = () => {
 
-  const [web3State] = useContext(Web3Context);
-  const comEth = useContext(ComEthContext);
+  //const [web3State] = useContext(Web3Context);
+  //const comEth = useContext(ComEthContext);
 
-  const toast = useToast();
+  //const toast = useToast();
   
   return (
     <>
