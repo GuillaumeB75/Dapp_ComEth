@@ -15,7 +15,7 @@ const HomeBody = () => {
           w="25%"
           h="25rem"
         > 
-          <Box marginTop="20rem" marginLeft="10rem">
+          <Box marginTop="20rem" marginLeft="2rem">
             <VoteButton />
           </Box>
         </Box>
@@ -26,7 +26,7 @@ const HomeBody = () => {
           w="25%"
           h="25rem"
         >
-          <Box marginTop="20rem" marginLeft="8rem">
+          <Box marginTop="20rem" marginLeft="2rem">
             <ProposButton />
           </Box>
         </Box>
@@ -37,7 +37,7 @@ const HomeBody = () => {
           w="25%"
           h="25rem"
         >
-          <Box marginTop="20rem" marginLeft="10rem">
+          <Box marginTop="20rem" marginLeft="2rem">
             <InfoButton />
           </Box>
         </Box>

@@ -9,35 +9,35 @@ const InformationBody = () => {
         <>
             <Flex marginLeft="4rem" w="90%" marginTop="4rem">
         <Box
-          boxShadow="dark-lg"
+          boxShadow="lg"
           marginLeft="11rem"
-          rounded="md"
+          backgroundColor="blackAlpha.200"
           w="25%"
-          h="25rem"
+          h="24rem"
         > 
-          <Box marginTop="20rem" marginLeft="10rem">
+          <Box marginTop="20rem" marginLeft="2rem">
             <StatsButton />
           </Box>
         </Box>
         <Box
-          boxShadow="dark-lg"
+          boxShadow="lg"
           marginLeft="6rem"
-          rounded="md"
+          backgroundColor="blackAlpha.200"
           w="25%"
-          h="25rem"
+          h="24rem"
         >
-          <Box marginTop="20rem" marginLeft="8rem">
+          <Box marginTop="20rem" marginLeft="2rem">
             <BudgetButton />
           </Box>
         </Box>
         <Box
-          boxShadow="dark-lg"
+          boxShadow="lg"
           marginLeft="6rem"
-          rounded="md"
+          backgroundColor="blackAlpha.200"
           w="25%"
-          h="25rem"
+          h="24rem"
         >
-          <Box marginTop="20rem" marginLeft="10rem">
+          <Box marginTop="20rem" marginLeft="2rem">
             <PeopleButton />
           </Box>
         </Box>

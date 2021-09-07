@@ -6,7 +6,7 @@ import ToggleModeDark from "./ToggleModeDark";
 const MainHeader = () => {
     return (
         <>
-            <Box right="0" left="0" w="100%" backgroundColor="teal.400"  boxShadow="dark-lg">
+            <Box right="0" left="0" w="100%" backgroundColor="teal.400" >
                 <Box marginLeft="16rem">
                 <Link to="/home">Logo</Link>
                 </Box>

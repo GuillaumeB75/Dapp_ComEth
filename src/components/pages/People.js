@@ -5,7 +5,7 @@ import PeopleTemplate from "../templates/PeopleTemplate";
 const People = () => {
   return (
     <>
-      <Box h="85vh" w="100%" bgGradient="linear(to-t,gray.800, teal.400);">
+      <Box h="85vh" w="100%" bgGradient="linear(to-t,teal.600, teal.400);">
         <PeopleTemplate />
         <NavInfoOnly />
         <Footer/>

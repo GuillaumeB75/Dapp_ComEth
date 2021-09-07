@@ -75,7 +75,7 @@ const CreateComethForm = () => {
 
   return (
     <>
-      <Box boxShadow="dark-lg" w="35rem" rounded="lg">
+      <Box boxShadow="lg" w="35rem">
         <Box padding="1rem">
           Explication sur la création d'une communoté Ethereum
         </Box>
