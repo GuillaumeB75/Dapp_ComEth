@@ -89,7 +89,7 @@ const SubmitProposalForm = () => {
   return (
     <>
       <Center>
-        <FormControl boxShadow="lg" padding="2rem" w="45rem" rounded="lg">
+        <FormControl boxShadow="dark-lg" padding="2rem" w="45rem" rounded="lg">
           <FormLabel isRequired>Titre de proposition proposition</FormLabel>
           <Input
             onChange={handleChangeProposition}

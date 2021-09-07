@@ -9,7 +9,7 @@ const InformationBody = () => {
         <>
             <Flex marginLeft="4rem" w="90%" marginTop="4rem">
         <Box
-          boxShadow="lg"
+          boxShadow="dark-lg"
           marginLeft="11rem"
           backgroundColor="blackAlpha.200"
           w="25%"
@@ -20,7 +20,7 @@ const InformationBody = () => {
           </Box>
         </Box>
         <Box
-          boxShadow="lg"
+          boxShadow="dark-lg"
           marginLeft="6rem"
           backgroundColor="blackAlpha.200"
           w="25%"
@@ -31,7 +31,7 @@ const InformationBody = () => {
           </Box>
         </Box>
         <Box
-          boxShadow="lg"
+         boxShadow="dark-lg"
           marginLeft="6rem"
           backgroundColor="blackAlpha.200"
           w="25%"
