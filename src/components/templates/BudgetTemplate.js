@@ -1,6 +1,6 @@
 import { Box, Center, Heading } from "@chakra-ui/react";
 import {  useContext, useState } from "react";
-import {  ComEthContext } from "../../App";
+import { ComEthContext } from "../../context/ComEthContext";
 
 
 const BudgetTemplate = () => {
@@ -36,6 +36,7 @@ const BudgetTemplate = () => {
       <Box onChange={handleBalance} padding="1rem">Get Balance getBalance : {balance}</Box>
       <Box onChange={handleInvest}>getInvestmentBalance :  {invest}</Box>
       </Box>
+      
     </>
   );
 };

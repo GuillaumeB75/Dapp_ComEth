@@ -1,6 +1,6 @@
 import { Box, Center, Heading } from "@chakra-ui/react";
 import { useContext, useState } from "react";
-import { ComEthContext } from "../../App";
+import { ComEthContext } from "../../context/ComEthContext";
 
 const StatsTemplate = () => {
   const [proposal, setProposal] = useState({

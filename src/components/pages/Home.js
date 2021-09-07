@@ -6,7 +6,7 @@ import HomeTemplate from "../templates/HomeTemplate";
 const Home = () => {
   return (
     <>
-      <Box h="89vh" w="100%" bgGradient="linear(to-t,teal.600, teal.400);">
+      <Box h={{sm:"90vh",md:"100vh"}} w="100%"  bgGradient="linear(to-t,teal.600, teal.400);">
         <HomeTemplate />
         <NavLat />
         <Footer />

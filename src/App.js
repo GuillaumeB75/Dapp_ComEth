@@ -18,9 +18,13 @@ function App() {
   );
   const comEthFactory = useContract(ComEthFactoryAdress, ComEthFactoryAbi);
   const comEth = useContract(comEthAddress, ComEthAbi);
+  
   useEffect(() => {
     console.log("app context comEthAddress", comEthAddress);
   }, [comEthAddress]);
+  useEffect(() => {
+    if(comEth){console.log('ComEth',comEth);}
+  }, [comEthAddress,comEth]);
   return (
     <>
       <ComEthFactoryContext.Provider value={comEthFactory}>

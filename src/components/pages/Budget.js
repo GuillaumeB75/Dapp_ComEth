@@ -6,7 +6,7 @@ import BudgetTemplate from "../templates/BudgetTemplate";
 const Budget = () => {
   return (
     <>
-      <Box h="85vh" w="100%" bgGradient="linear(to-t,teal.600, teal.400);">
+      <Box h="100%" w="100%" bgGradient="linear(to-t,teal.600, teal.400);">
         <BudgetTemplate />
         <NavInfoOnly />
         <Footer />

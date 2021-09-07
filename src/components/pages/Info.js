@@ -6,7 +6,7 @@ import InfoTemplate from "../templates/InfoTemplate";
 const Info = () => {
   return (
     <>
-      <Box h="90vh" w="100%" bgGradient="linear(to-t,teal.600, teal.400);">
+      <Box minH="90vh" maxH="100vh" bgGradient="linear(to-t,teal.600, teal.400);">
         <InfoTemplate />
         <NavInfoOnly />
         <Footer />

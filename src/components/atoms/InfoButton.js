@@ -6,7 +6,7 @@ const InfoButton = () => {
     return (
         <>
             <Link to="/info">
-            <Circle as="button" fontWeight="bold" backgroundColor="whiteAlpha.700" w="85%" mt="5%" ml="5%" padding="3%">Info</Circle>
+            <Circle as="button" fontWeight="bold" backgroundColor="whiteAlpha.700" w="85%" mt="5%" ml="7%" padding="3%">Info</Circle>
             </Link>
         </>
     );

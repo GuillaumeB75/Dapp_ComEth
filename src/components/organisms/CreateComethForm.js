@@ -1,14 +1,23 @@
 import { React, useEffect } from "react";
 import { Box, Button, useToast } from "@chakra-ui/react";
 
+<<<<<<< HEAD
 import { ComEthFactoryContext, ComEthAddressContext } from "../../App";
+=======
+import { ComEthFactoryContext } from "../../App";
+import { ComEthAddressContext } from "../../App";
+>>>>>>> 04089ba61cf76ce6f061722fde76e20850bd8014
 import { useContext } from "react";
 import { Web3Context } from "web3-hooks";
 
 const CreateComethForm = () => {
   const [web3State] = useContext(Web3Context);
   const comEthFactory = useContext(ComEthFactoryContext);
+<<<<<<< HEAD
   const comEthAddressContext = useContext(ComEthAddressContext);
+=======
+  const { comEthAddress, setComEthAddress } = useContext(ComEthAddressContext);
+>>>>>>> 04089ba61cf76ce6f061722fde76e20850bd8014
 
   const toast = useToast();
 
@@ -39,9 +48,16 @@ const CreateComethForm = () => {
   useEffect(() => {
     // si simpleStorage est pas null alors
     if (comEthFactory) {
+<<<<<<< HEAD
       const cb = (comEthAddress, comEthOwner) => {
         if (comEthOwner.toLowerCase() === web3State.account.toLowerCase()) {
           console.log("Hello", comEthAddressContext);
+=======
+      const cb = (ComEthAddress, ComEthOwner) => {
+        if (ComEthOwner.toLowerCase() === web3State.account.toLowerCase()) {
+          console.log("Hello", ComEthAddress);
+          setComEthAddress(ComEthAddress);
+>>>>>>> 04089ba61cf76ce6f061722fde76e20850bd8014
           toast({
             title: "Event ComEthCreated",
             description: `comEthOwner: ${comEthOwner} comEthAddress: ${comEthAddress}`,
@@ -67,8 +83,12 @@ const CreateComethForm = () => {
 
     comEthFactory,
     web3State.account,
-    comEthAddressContext,
     toast,
+<<<<<<< HEAD
+=======
+    setComEthAddress,
+    comEthAddress,
+>>>>>>> 04089ba61cf76ce6f061722fde76e20850bd8014
     //userFilter,
   ]);
   

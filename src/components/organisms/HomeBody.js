@@ -1,4 +1,4 @@
-import { Box,  Flex } from "@chakra-ui/react";
+import { Box, SimpleGrid} from "@chakra-ui/react";
 import React from "react";
 import InfoButton from "../atoms/InfoButton";
 import ProposButton from "../atoms/ProposButton";
@@ -7,41 +7,25 @@ import VoteButton from "../atoms/VoteButton";
 const HomeBody = () => {
   return (
     <>
-      <Flex marginLeft="4rem" w="90%" marginTop="4rem">
-        <Box
-          boxShadow="dark-lg"
-          marginLeft="11rem"
-          rounded="md"
-          w="25%"
-          h="25rem"
-        > 
-          <Box marginTop="20rem" marginLeft="2rem">
-            <VoteButton />
-          </Box>
+      <SimpleGrid columns={[1, 1, 2, 3]} spacing="40px" m="4rem" ml="12rem">
+        <Box rounded="md" textAlign="center" p="2rem" backgroundColor="blackAlpha.200" height={{sm:"20rem", md:"22rem", lg:"29rem"}}>
+          <Box boxShadow="inner" p="0.5rem" rounded="md" backgroundColor="teal.400" mb={{sm:"9rem", md:"9rem", lg:"17rem"}}>
+           Venez voter les propositions déjà suggérer par votre groupe ComEth
+           </Box>
+          <VoteButton />
         </Box>
-        <Box
-          boxShadow="dark-lg"
-          marginLeft="6rem"
-          rounded="md"
-          w="25%"
-          h="25rem"
-        >
-          <Box marginTop="20rem" marginLeft="2rem">
-            <ProposButton />
-          </Box>
+        <Box rounded="md"  textAlign="center" p="2rem"  backgroundColor="blackAlpha.200" height={{sm:"20rem", md:"22rem", lg:"29rem"}}>
+        <Box boxShadow="inner" p="0.5rem" rounded="md" backgroundColor="teal.400" mb={{sm:"9rem", md:"9rem", lg:"17rem"}}>
+          Soumettez vos propres propositions à faire voter à votre groupe
+          </Box> <ProposButton />
         </Box>
-        <Box
-          boxShadow="dark-lg"
-          marginLeft="6rem"
-          rounded="md"
-          w="25%"
-          h="25rem"
-        >
-          <Box marginTop="20rem" marginLeft="2rem">
-            <InfoButton />
+        <Box rounded="md" textAlign="center" p="2rem" backgroundColor="blackAlpha.200" height={{sm:"20rem", md:"22rem", lg:"29rem"}}>
+        <Box boxShadow="inner" p="0.5rem" rounded="md" backgroundColor="teal.400" mb={{sm:"9rem", md:"9rem", lg:"17rem"}}>
+          Retrouvez vos informations, statistique, proposition déjà voter ici
           </Box>
+          <InfoButton />
         </Box>
-      </Flex>
+      </SimpleGrid>
     </>
   );
 };

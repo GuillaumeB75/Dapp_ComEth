@@ -26,7 +26,8 @@ const VoteTemplate = () => {
       <Heading marginBottom="2rem">Just Vote</Heading>
       </Center>
       <Center>
-        <Box boxShadow="dark-lg" w="40rem" rounded="lg">
+        <Box mt={{sm:"2rem", md:"3rem", lg:"6rem"}}
+        ml={{sm:"7rem", md:"9rem"}} boxShadow="lg" w="40rem" backgroundColor="blackAlpha.200">
         <FormControl id="country" w="32rem" margin="2rem">
           <FormLabel fontWeight="bold" margin="1rem">Que diriez-vous d'une salle de sport ?</FormLabel>
           <Select boxShadow="lg" margin="1rem" placeholder="Selectionnez votre réponse">

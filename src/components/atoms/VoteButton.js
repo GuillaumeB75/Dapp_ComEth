@@ -6,7 +6,7 @@ const VoteButton = () => {
     return (
         <>
             <Link to="/vote">
-            <Circle as="button" fontWeight="bold" backgroundColor="whiteAlpha.700" w="85%" m="5%" padding="3%">Vote</Circle>
+            <Circle as="button" fontWeight="bold" backgroundColor="whiteAlpha.700" w="85%" m="7%" padding="3%">Vote</Circle>
             </Link>
         </>
     );

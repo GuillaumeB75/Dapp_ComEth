@@ -4,7 +4,7 @@ const Create = () => {
   return (
     <>
     {/* TODO : faire la page front joulie */}
-    <Box h="89vh" w="100%" bgGradient="linear(to-t,teal.600, teal.400);">
+    <Box h="100%" w="100%" bgGradient="linear(to-t,teal.600, teal.400);">
       <CreateTemplate />
       </Box>
     </>

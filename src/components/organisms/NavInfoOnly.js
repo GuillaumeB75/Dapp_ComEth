@@ -6,6 +6,7 @@ import PeopleButton from "../atoms/PeopleButton";
 import VoteButton from "../atoms/VoteButton";
 import ProposButton from "../atoms/ProposButton";
 import InfoButton from "../atoms/InfoButton";
+import Logo from "../atoms/Logo";
 
 const NavInfoOnly = () => {
   return (
@@ -17,8 +18,9 @@ const NavInfoOnly = () => {
         boxShadow="dark-lg"
         backgroundColor="gray.900"
         h="100%"
-        w="11%"
+        w={{sm:"8rem", md:"9rem", lg:"10rem"}} 
       >
+        <Logo />
         <Box marginTop="10rem">
           <VoteButton />
           <ProposButton />

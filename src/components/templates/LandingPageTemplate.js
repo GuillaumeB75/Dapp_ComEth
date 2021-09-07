@@ -24,7 +24,7 @@ const LandingPageTemplate = () => {
             textShadow="3px 3px #43A2F7"
             m="6"
             fontSize="100px"
-            color="green"
+            color="teal"
             margin="4rem"
           >
             ComEth
