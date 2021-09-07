@@ -7,8 +7,8 @@ import FooterLandingPage from "../organisms/FooterLandingPage";
 
 const LandingPageTemplate = () => {
   const [web3State, login] = useContext(Web3Context);
-  console.log("me");
-  console.log(web3State.account);
+  console.log("me",web3State.account);
+
 
   const handleOnClickLogin = () => {
     if (!web3State.isLogged) {

@@ -12,28 +12,6 @@ const CreateComethForm = () => {
   const { comEthAddress } = useContext(ComEthAddressContext);
 
   const toast = useToast();
-  /*
-  useEffect(() => {
-    if (comEthFactory) {
-      const cb = (account, str) => {
-        setValue(str);
-        toast({
-          title: "This is YOUR event",
-          description: `${account} ||${str}`,
-          status: "warning",
-          position: "top-right",
-          duration: 9000,
-          isClosable: true,
-        })
-      }
-      const allFilter = comEthFactory.filters.ComEthCreated(web3State.account);
-      comEthFactory.on(allFilter, cb);
-      return () => {
-        comEthFactory.off(allFilter, cb);
-      };
-    }
-  }, [comEthFactory, web3State.account, toast]);
-  */
 
   const handleClickCreate = async () => {
     try {
@@ -87,12 +65,15 @@ const CreateComethForm = () => {
       };
     }
   }, [
+
     comEthFactory,
     web3State.account,
+    comEthAddressContext,
     toast,
     comEthAddress
     //userFilter,
   ]);
+  
 
   return (
     <>

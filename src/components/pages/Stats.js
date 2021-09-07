@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
-import NavLat from "../organisms/NavLat";
+import Footer from "../organisms/Footer";
+import NavInfoOnly from "../organisms/NavInfoOnly";
 import StatsTemplate from "../templates/StatsTemplate";
 
 const Stats = () => {
@@ -7,7 +8,8 @@ const Stats = () => {
     <>
     <Box h="85vh" w="100%"  bgGradient="linear(to-t,gray.800, teal.400);">
       <StatsTemplate />
-      <NavLat/>
+      <NavInfoOnly />
+      <Footer />
       </Box>
     </>
   );
