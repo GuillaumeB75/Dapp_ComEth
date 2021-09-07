@@ -1,5 +1,5 @@
 import { React, useEffect } from "react";
-import { Box, Circle, useToast } from "@chakra-ui/react";
+import { Box, Button, useToast } from "@chakra-ui/react";
 
 import { ComEthFactoryContext } from "../../App";
 import { ComEthAddressContext } from "../../App";
@@ -46,7 +46,7 @@ const CreateComethForm = () => {
           setComEthAddress(ComEthAddress);
           toast({
             title: "Event ComEthCreated",
-            description: `comEthOwner: ${comEthOwner} comEthAddress: ${comEthAddress}`,
+            description: `comEthOwner: ${ComEthOwner} comEthAddress: ${ComEthAddress}`,
             status: "info",
             position: "top-right",
             duration: 9000,
@@ -55,7 +55,7 @@ const CreateComethForm = () => {
         }
         console.log("hello");
         console.log(
-          `comEthOwner: ${comEthOwner} comEthAddress: ${comEthAddress}`
+          `comEthOwner: ${ComEthOwner} comEthAddress: ${ComEthAddress}`
         );
       };
       // ecouter sur l'event DataSet
@@ -78,13 +78,13 @@ const CreateComethForm = () => {
 
   return (
     <>
-      <Box boxShadow="lg" w="35rem" p="1rem" mt="3rem" rounded="md" backgroundColor="blackAlpha.200">
-        <Box fontWeight="bold" backgroundColor="teal.400" boxShadow="inner" p="0.5rem" rounded="md">
+      <Box boxShadow="lg" w="35rem">
+        <Box padding="1rem">
           Explication sur la création d'une communoté Ethereum
         </Box>
-        <Circle fontWeight="bold" backgroundColor="whiteAlpha.400" boxShadow="lg" onClick={handleClickCreate}  p="0.5em" margin="2rem">
+        <Button boxShadow="lg" onClick={handleClickCreate} margin="2rem">
           Create your account
-        </Circle>
+        </Button>
       </Box>
     </>
   );

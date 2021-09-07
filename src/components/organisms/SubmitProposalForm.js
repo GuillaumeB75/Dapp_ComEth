@@ -89,11 +89,7 @@ const SubmitProposalForm = () => {
   return (
     <>
       <Center>
-<<<<<<< HEAD
-        <FormControl boxShadow="dark-lg" padding="2rem" w="45rem" rounded="lg">
-=======
         <FormControl boxShadow="lg" backgroundColor="blackAlpha.200" padding="2rem" w={{sm:"29rem" ,md:"43rem",lg:"45rem"}} ml={{sm:"8rem", md:"9rem"}} mt="2rem">
->>>>>>> 04089ba61cf76ce6f061722fde76e20850bd8014
           <FormLabel isRequired>Titre de proposition proposition</FormLabel>
           <Input
             onChange={handleChangeProposition}

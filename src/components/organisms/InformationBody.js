@@ -5,43 +5,6 @@ import BudgetButton from "../atoms/BudgetButton";
 import StatsButton from "../atoms/StatsButton";
 
 const InformationBody = () => {
-<<<<<<< HEAD
-    return (
-        <>
-            <Flex marginLeft="4rem" w="90%" marginTop="4rem">
-        <Box
-          boxShadow="dark-lg"
-          marginLeft="11rem"
-          backgroundColor="blackAlpha.200"
-          w="25%"
-          h="24rem"
-        > 
-          <Box marginTop="20rem" marginLeft="2rem">
-            <StatsButton />
-          </Box>
-        </Box>
-        <Box
-          boxShadow="dark-lg"
-          marginLeft="6rem"
-          backgroundColor="blackAlpha.200"
-          w="25%"
-          h="24rem"
-        >
-          <Box marginTop="20rem" marginLeft="2rem">
-            <BudgetButton />
-          </Box>
-        </Box>
-        <Box
-         boxShadow="dark-lg"
-          marginLeft="6rem"
-          backgroundColor="blackAlpha.200"
-          w="25%"
-          h="24rem"
-        >
-          <Box marginTop="20rem" marginLeft="2rem">
-            <PeopleButton />
-          </Box>
-=======
   return (
     <>
     
@@ -62,7 +25,6 @@ const InformationBody = () => {
            Ici c'est pour voir qui est actif, qui est banni, qui fait partie de ta ComEth
            </Box>
           <PeopleButton />
->>>>>>> 04089ba61cf76ce6f061722fde76e20850bd8014
         </Box>
       </SimpleGrid>
       
