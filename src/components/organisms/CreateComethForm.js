@@ -1,15 +1,14 @@
 import { React, useEffect } from "react";
 import { Box, Button, useToast } from "@chakra-ui/react";
 
-import { ComEthFactoryContext } from "../../context/ComEthFactoryContext";
-import { ComEthAddressContext } from "../../context/ComEthAddressContext";
+import { ComEthFactoryContext, ComEthAddressContext } from "../../App";
 import { useContext } from "react";
 import { Web3Context } from "web3-hooks";
 
 const CreateComethForm = () => {
   const [web3State] = useContext(Web3Context);
   const comEthFactory = useContext(ComEthFactoryContext);
-  const { comEthAddress } = useContext(ComEthAddressContext);
+  const comEthAddressContext = useContext(ComEthAddressContext);
 
   const toast = useToast();
 
@@ -40,12 +39,12 @@ const CreateComethForm = () => {
   useEffect(() => {
     // si simpleStorage est pas null alors
     if (comEthFactory) {
-      const cb = (ComEthAddress, ComEthOwner) => {
-        if (ComEthOwner.toLowerCase() === web3State.account.toLowerCase()) {
-          console.log("Hello", comEthAddress);
+      const cb = (comEthAddress, comEthOwner) => {
+        if (comEthOwner.toLowerCase() === web3State.account.toLowerCase()) {
+          console.log("Hello", comEthAddressContext);
           toast({
             title: "Event ComEthCreated",
-            description: `comEthOwner: ${ComEthOwner} comEthAddress: ${ComEthAddress}`,
+            description: `comEthOwner: ${comEthOwner} comEthAddress: ${comEthAddress}`,
             status: "info",
             position: "top-right",
             duration: 9000,
@@ -54,7 +53,7 @@ const CreateComethForm = () => {
         }
         console.log("hello");
         console.log(
-          `comEthOwner: ${ComEthOwner} comEthAddress: ${ComEthAddress}`
+          `comEthOwner: ${comEthOwner} comEthAddress: ${comEthAddress}`
         );
       };
       // ecouter sur l'event DataSet
@@ -70,7 +69,6 @@ const CreateComethForm = () => {
     web3State.account,
     comEthAddressContext,
     toast,
-    comEthAddress
     //userFilter,
   ]);
   
