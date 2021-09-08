@@ -5,7 +5,7 @@ const HomeTemplate = () => {
   return (
     <>
       <Center>
-      <Heading  ml={{ sm: "8rem" }} textAlign="center" fontSize="4xl" fontFamily="fantasy">Welcome Home</Heading>
+      <Heading  ml={{ sm: "8rem" }} textAlign="center" fontSize="4xl" fontFamily="fantasy">Bienvenue dans votre ComEth</Heading>
       </Center>
       <HomeBody />
     </>

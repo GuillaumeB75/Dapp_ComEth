@@ -80,10 +80,10 @@ const CreateComethForm = () => {
     <>
       <Box boxShadow="lg" w="35rem">
         <Box padding="1rem">
-          Explication sur la création d'une communoté Ethereum
+          Comment créer votre communauté!
         </Box>
         <Button boxShadow="lg" onClick={handleClickCreate} margin="2rem">
-          Create your account
+          Créez votre communauté!
         </Button>
       </Box>
     </>

@@ -90,7 +90,7 @@ const SubmitProposalForm = () => {
     <>
       <Center>
         <FormControl boxShadow="lg" backgroundColor="blackAlpha.200" padding="2rem" w={{sm:"68%" ,md:"43rem",lg:"45rem"}} ml={{sm:"8rem", md:"9rem"}} mt="2rem">
-          <FormLabel isRequired>Titre de proposition proposition</FormLabel>
+          <FormLabel isRequired>Renseignez votre proposition de vote :</FormLabel>
           <Input
             onChange={handleChangeProposition}
             size="sm"
@@ -100,7 +100,7 @@ const SubmitProposalForm = () => {
             margin="1rem"
           />
 
-          <Box>Vos Options de Vote - propositions</Box>
+          <Box>Options liées à votre proposition de vote :</Box>
 
           <Input
             onChange={handleChangeOptions}
@@ -111,7 +111,7 @@ const SubmitProposalForm = () => {
             margin="1rem"
           />
 
-          <FormLabel p="-0">Choisir votre limie de temps</FormLabel>
+          <FormLabel p="-0">Combien de temps votre proposition de vote doit rester active : </FormLabel>
           <Select
             onChange={handleChangeTimeLimit}
             size="sm"
@@ -125,7 +125,7 @@ const SubmitProposalForm = () => {
             <option value="option4">4 semaines</option>
           </Select>
 
-          <FormLabel>Amount</FormLabel>
+          <FormLabel>Renseignez le montant que vous soumettez au vote :</FormLabel>
           <Input
             onChange={handleChangeAmount}
             size="sm"
@@ -134,7 +134,7 @@ const SubmitProposalForm = () => {
             placeholder="0,75"
             margin="1rem"
           />
-          <FormLabel>Paiement reveiver</FormLabel>
+          <FormLabel>Adresse à laquelle les fonds seront versés après un vote positif :</FormLabel>
           <Input
             onChange={handleChangeAddressReceive}
             size="sm"

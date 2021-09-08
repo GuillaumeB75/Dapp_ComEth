@@ -16,7 +16,7 @@ const FooterLandingPage = () => {
                 {web3State.isLogged ? (
                     <>
                         <Tag borderRadius="full" variant="solid" colorScheme="green">
-                            <TagLabel>Vous êtes connecté a Metamask</TagLabel>
+                            <TagLabel>Vous êtes connecté à Metamask!</TagLabel>
                         </Tag>{" "}
                     </>
                 ) : (
@@ -27,7 +27,7 @@ const FooterLandingPage = () => {
                             colorScheme="red"
                             onClick={() => handleOnClickLogin()}
                         >
-                            <TagLabel>Vous n'êtes pas connecté a Metamask</TagLabel>
+                            <TagLabel>Vous n'êtes pas connecté à Metamask!</TagLabel>
                         </Tag>{" "}
                     </>
                 )}
