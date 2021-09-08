@@ -90,7 +90,7 @@ const SubmitProposalForm = () => {
     <>
       <Center>
         <FormControl boxShadow="lg" backgroundColor="blackAlpha.200" padding="2rem" w={{sm:"68%" ,md:"43rem",lg:"45rem"}} ml={{sm:"8rem", md:"9rem"}} mt="2rem">
-          <FormLabel isRequired>Renseignez votre proposition de vote :</FormLabel>
+          <FormLabel fontWeight="bold" isRequired>Titre de proposition proposition</FormLabel>
           <Input
             onChange={handleChangeProposition}
             size="sm"
@@ -100,7 +100,7 @@ const SubmitProposalForm = () => {
             margin="1rem"
           />
 
-          <Box>Options liées à votre proposition de vote :</Box>
+          <Box fontWeight="bold">Vos Options de Vote - propositions</Box>
 
           <Input
             onChange={handleChangeOptions}
@@ -111,7 +111,7 @@ const SubmitProposalForm = () => {
             margin="1rem"
           />
 
-          <FormLabel p="-0">Combien de temps votre proposition de vote doit rester active : </FormLabel>
+          <FormLabel p="-0" fontWeight="bold">Choisir votre limie de temps</FormLabel>
           <Select
             onChange={handleChangeTimeLimit}
             size="sm"
@@ -125,7 +125,7 @@ const SubmitProposalForm = () => {
             <option value="option4">4 semaines</option>
           </Select>
 
-          <FormLabel>Renseignez le montant que vous soumettez au vote :</FormLabel>
+          <FormLabel fontWeight="bold">Amount</FormLabel>
           <Input
             onChange={handleChangeAmount}
             size="sm"
@@ -134,7 +134,7 @@ const SubmitProposalForm = () => {
             placeholder="0,75"
             margin="1rem"
           />
-          <FormLabel>Adresse à laquelle les fonds seront versés après un vote positif :</FormLabel>
+          <FormLabel fontWeight="bold">Paiement reveiver</FormLabel>
           <Input
             onChange={handleChangeAddressReceive}
             size="sm"
@@ -144,7 +144,7 @@ const SubmitProposalForm = () => {
             margin="1rem"
           />
           <Center>
-          <Circle as="button" backgroundColor="whiteAlpha.400" p="1rem" m="0.5rem" onClick={handleSubmitAll}>Valider</Circle>
+          <Circle as="button" backgroundColor="whiteAlpha.400" p="1rem" m="0.5rem" fontWeight="bold" onClick={handleSubmitAll}>Valider</Circle>
           </Center>
         </FormControl>
       </Center>

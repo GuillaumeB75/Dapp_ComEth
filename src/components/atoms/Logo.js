@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <>
       <Center>
-        <Circle backgroundColor="whiteAlpha.200" w="5rem" h="5rem">
+        <Circle  fontWeight="bold" backgroundColor="whiteAlpha.200" w="5rem" h="5rem" textColor="whiteAlpha.400">
           <Link to="/home">Logo</Link>
         </Circle>
       </Center>
