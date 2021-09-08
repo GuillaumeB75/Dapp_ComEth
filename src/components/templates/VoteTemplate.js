@@ -21,7 +21,7 @@ const VoteTemplate = () => {
   return (
     <>
       <Center>
-        <Heading marginBottom="2rem" ml={{sm:"6rem"}}>Just Vote</Heading>
+        <Heading marginBottom="2rem" ml={{sm:"6rem"}} fontSize="4xl" fontFamily="fantasy">Just Vote</Heading>
       </Center>
       <Center>
         <Box

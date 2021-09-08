@@ -29,7 +29,7 @@ const BudgetTemplate = () => {
   return (
     <>
       <Center>
-      <Heading  ml={{sm:"6rem"}}>View Budget</Heading>
+      <Heading  ml={{sm:"6rem"}} textAlign="center" fontSize="4xl" fontFamily="fantasy">Les budgets de votre ComEth</Heading>
       </Center>
       <Box pl="12rem" pt="2rem">
       <Box>définir les budget alloué - a venir - totaux</Box>

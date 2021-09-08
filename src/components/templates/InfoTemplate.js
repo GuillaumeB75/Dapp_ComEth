@@ -6,7 +6,7 @@ const InfoTemplate = () => {
   return (
     <>
       <Center>
-        <Heading    ml={{ sm: "8rem" }} textAlign="center">Vos Informations</Heading>
+        <Heading    ml={{ sm: "8rem" }} textAlign="center" fontSize="4xl" fontFamily="fantasy">Vos Informations</Heading>
       </Center>
       
       <InformationBody />
