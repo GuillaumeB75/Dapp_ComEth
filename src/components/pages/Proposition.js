@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import Footer from "../organisms/Footer";
+
 import NavLat from "../organisms/NavLat";
 import PropositionTemplate from "../templates/PropositionTemplate";
 const Proposition = () => {
@@ -8,7 +8,7 @@ const Proposition = () => {
       <Box h="95vh" w="100%" bgGradient="linear(to-t,teal.600, teal.400);">
         <PropositionTemplate />
         <NavLat />
-        <Footer />
+       
       </Box>
     </>
   );
