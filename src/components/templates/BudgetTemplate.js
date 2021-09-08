@@ -29,7 +29,7 @@ const BudgetTemplate = () => {
   return (
     <>
       <Center>
-      <Heading>View Budget</Heading>
+      <Heading  ml={{sm:"6rem"}}>View Budget</Heading>
       </Center>
       <Box pl="12rem" pt="2rem">
       <Box>définir les budget alloué - a venir - totaux</Box>

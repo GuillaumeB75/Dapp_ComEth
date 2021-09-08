@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heading, Button, Center } from "@chakra-ui/react";
+import { Heading, Circle, Center } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { Web3Context } from "web3-hooks";
 import { useContext } from "react";
@@ -22,9 +22,9 @@ const LandingPageTemplate = () => {
         <Heading>
           <Text
             textShadow="3px 3px #43A2F7"
-            m="6"
+            mt={{sm:"10rem", lg:"10rem"}}
             fontSize="100px"
-            color="teal"
+            color="blue.700"
             margin="4rem"
           >
             ComEth
@@ -34,33 +34,49 @@ const LandingPageTemplate = () => {
       <Center marginBottom="4rem">
         <Text
           color={"gray.500"}
-          maxW={"3xl"}
+          maxW={"4xl"}
+          ml={{sm:"0.5rem"}}
+          mr={{sm:"0.5rem"}}
+          mt={{lg:"2rem"}}
+          mb={{lg:"1rem"}}
+          textAlign="center"
           fontStyle="italic"
+          fontWeight="bold"
           fontSize="25px"
         >
           A new possibility to create communities and manage sharing funds
         </Text>
       </Center>
-      <Center marginBottom="4rem">
+      <Center>
+        
         <Link to={web3State.isLogged ? "/create" : "/"}>
-          <Button
+          <Circle
+          as="button"
+          backgroundColor="blue.500"
+          fontWeight="bold"
+          p="1rem"
             marginRight="2rem"
             colorScheme="blue"
             onClick={() => handleOnClickLogin()}
           >
             Create a Community
-          </Button>
+          </Circle>
         </Link>
 
         <Link to={web3State.isLogged ? "/login" : "/"}>
-          <Button
+          <Circle
+          as="button"
+          fontWeight="bold"
+          p="1rem"
+          backgroundColor="blue.500"
             marginLeft="2rem"
             colorScheme="blue"
             onClick={() => handleOnClickLogin()}
           >
             Join a Community
-          </Button>
+          </Circle>
         </Link>
+        
       </Center>
       <FooterLandingPage />
     </>

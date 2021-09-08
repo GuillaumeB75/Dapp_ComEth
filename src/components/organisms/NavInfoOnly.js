@@ -11,26 +11,26 @@ import Logo from "../atoms/Logo";
 const NavInfoOnly = () => {
   return (
     <>
-
       <Box
-        pos="absolute"
-        top="0"
-        boxShadow="dark-lg"
-        backgroundColor="gray.900"
-        h="100%"
-        w={{sm:"8rem", md:"9rem", lg:"10rem"}} 
-      >
-        <Logo />
-        <Box marginTop="10rem">
-          <VoteButton />
+                pos="absolute"
+                top="0"
+                h="100%"
+                w={{ sm: "8rem", md: "9rem", lg: "10rem" }}
+                boxShadow="dark-lg"
+                backgroundColor="gray.900"
+            >
+                <Box pos="sticky" top="10" left="0">
+                    <Box mb="13rem">
+                    <Logo />
+                    </Box>
+                    <VoteButton />
           <ProposButton />
           <InfoButton />
           <StatsButton />
           <BudgetButton />
           <PeopleButton />
-        </Box>
-      </Box>
-
+                </Box>
+            </Box>
     </>
   );
 };

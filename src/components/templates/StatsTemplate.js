@@ -25,9 +25,9 @@ const StatsTemplate = () => {
   return (
     <>
       <Center>
-        <Heading>View Stats</Heading>
+        <Heading  ml={{sm:"6rem"}}>View Stats</Heading>
       </Center>
-      <Box backgroundColor="blackAlpha.200" ml="16rem" rounded="md" mt="4rem" p="2rem" width="30%" h="55%">
+      <Box backgroundColor="blackAlpha.200" ml={{sm:"9rem",md:"12rem",lg:"16rem"}} mr={{sm:"1rem"}} rounded="md" mt="4rem" p="2rem" width={{sm:"70%",md:"45%",lg:"30%"}} h="55%">
         <Center><Box p="3%" rounded="md" backgroundColor="teal.400" mb="6%">Dernière proposition voter/ou à voter</Box></Center>
         <Box onChange={handleProposal} mb="6%">option : {proposal.option}</Box>
         <Box onChange={handleProposal} mb={["3%", "6%"]}>title : {proposal.title}</Box>

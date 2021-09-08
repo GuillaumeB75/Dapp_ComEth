@@ -1,15 +1,14 @@
 import { Box } from "@chakra-ui/react";
-
 import NavLat from "../organisms/NavLat";
 import VoteTemplate from "../templates/VoteTemplate";
 
 const Vote = () => {
   return (
     <>
-      <Box h="90vh" w="100%" bgGradient="linear(to-t,teal.600, teal.400);">
+      <Box minH="91.7vh" maxW="100%" w="100%" bgGradient="linear(to-t,teal.600, teal.400);">
         <VoteTemplate />
         <NavLat />
-       
+        
       </Box>
     </>)
 }
