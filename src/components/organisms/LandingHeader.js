@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import ToggleModeDark from "./ToggleModeDark";
 import Logo from "../atoms/Logo";
 
@@ -10,8 +10,6 @@ const LandingHeader = () => {
             <Box  pos="absolute" left="2" top="2">
             <Logo />
             </Box>
-            <Center>
-            </Center>
             <ToggleModeDark/>
             </Box>
         </>

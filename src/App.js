@@ -8,10 +8,9 @@ import {
 
 export const ComEthAddressContext = React.createContext(null);
 export const ComEthFactoryContext = React.createContext(null);
-export const ComEthContext = React.createContext(null);
 
 function App() {
-  const [comEthAddress, setComEthAddress] = useState("");
+  const [comEthAddress, setComEthAddress] = useState(null);
   const comEthFactory = useContract(ComEthFactoryAdress, ComEthFactoryAbi);
 
   useEffect(() => {

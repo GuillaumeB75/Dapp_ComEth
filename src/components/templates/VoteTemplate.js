@@ -21,14 +21,7 @@ const VoteTemplate = () => {
   return (
     <>
       <Center>
-        <Heading
-          marginBottom="2rem"
-          ml={{ sm: "6rem" }}
-          fontSize="4xl"
-          fontFamily="fantasy"
-        >
-          Just Vote
-        </Heading>
+        <Heading  mt={{sm:"5rem",lg:"8rem"}} marginBottom="2rem" ml={{sm:"6rem"}} fontSize="4xl" fontFamily="fantasy">Just Vote</Heading>
       </Center>
       <Center>
         <Box
@@ -52,7 +45,7 @@ const VoteTemplate = () => {
               <option>Non</option>
               <option>Blanc</option>
             </Select>
-            <Button boxShadow="lg" margin="2rem">
+            <Button boxShadow="lg" margin="2rem" _hover= {{bg:"#21bdbf"}}>
               Voter
             </Button>
           </FormControl>

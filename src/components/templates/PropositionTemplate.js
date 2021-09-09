@@ -6,14 +6,7 @@ const PropositionTemplate = () => {
   return (
     <>
       <Center>
-        <Heading
-          ml={{ sm: "8rem" }}
-          textAlign="center"
-          fontSize="4xl"
-          fontFamily="fantasy"
-        >
-          Make Propositions
-        </Heading>
+      <Heading  mt={{sm:"5rem",lg:"8rem"}} ml={{ sm: "8rem" }} textAlign="center" fontSize="4xl" fontFamily="fantasy">Make Propositions</Heading>
       </Center>
       <SubmitProposalForm />
     </>

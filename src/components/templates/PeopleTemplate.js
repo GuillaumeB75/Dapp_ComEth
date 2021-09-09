@@ -1,4 +1,12 @@
-import { Box, Center, Circle, Heading, Input } from "@chakra-ui/react";
+import {
+  Box,
+  Center,
+  Circle,
+  Heading,
+  Input,
+  Button,
+  Stack,
+} from "@chakra-ui/react";
 import { useContext, useState } from "react";
 import { ComEthContext } from "../../context/ComEthContext";
 
@@ -31,6 +39,7 @@ const PeopleTemplate = () => {
     <>
       <Center>
         <Heading
+          mt={{ sm: "5rem", lg: "8rem" }}
           ml={{ sm: "8rem" }}
           textAlign="center"
           fontSize="4xl"
@@ -39,17 +48,18 @@ const PeopleTemplate = () => {
           Membre de ma ComEhnauté
         </Heading>
       </Center>
-
       <Box
-        boxShadow="lg"
-        ml={{ sm: "9rem", md: "16rem", lg: "26rem" }}
-        mr={{ sm: "1rem" }}
-        p="2rem"
-        mt={{ sm: "8rem" }}
         rounded="md"
+        boxShadow="lg"
+        mt={{ sm: "8rem" }}
+        ml={{ sm: "9rem", md: "13rem", lg: "19rem" }}
+        w={{ sm: "65%", md: "58%", lg: "40%" }}
         backgroundColor="blackAlpha.200"
-        w={{ md: "60%", lg: "40%" }}
+        p="1rem"
       >
+        <Center>
+        <Box backgroundColor="#2ac9c7" rounded="md" p="1rem" fontWeight="bold" m="1rem">Activités au seint de la ComEth</Box>
+        </Center>
         <Box mt="2rem">
           <Box m="2rem" ml={{ md: "1rem" }}>
             {active === true ? (
@@ -59,7 +69,7 @@ const PeopleTemplate = () => {
                 fontFamily="monospace"
                 fontWeight="bold"
               >
-                you are active{" "}
+                Est Actif{" "}
               </Circle>
             ) : (
               <Circle
@@ -68,21 +78,26 @@ const PeopleTemplate = () => {
                 fontFamily="monospace"
                 fontWeight="bold"
               >
-                You'r not active
+                Pas Actif
               </Circle>
             )}
             <Box padding="1rem" fontWeight="black">
               {" "}
-              Show how is active :
+              Voir qui est Actif :
             </Box>
-            <Center>
+            <Stack direction="row">
               <Input
                 onChange={handlActive}
                 backgroundColor="teal.600"
                 value={active}
               ></Input>
-              <Circle></Circle>
-            </Center>
+              <Button
+                backgroundColor="whiteAlpha.300"
+                _hover={{ bg: "#21bdbf" }}
+              >
+                Chercher
+              </Button>
+            </Stack>
           </Box>
           <Box m="2rem">
             {!banned === true ? (
@@ -92,7 +107,7 @@ const PeopleTemplate = () => {
                 fontFamily="monospace"
                 fontWeight="bold"
               >
-                You'r not banned{" "}
+                Pas banni{" "}
               </Circle>
             ) : (
               <Circle
@@ -101,17 +116,25 @@ const PeopleTemplate = () => {
                 fontFamily="monospace"
                 fontWeight="bold"
               >
-                You are Banned
+                Banni
               </Circle>
             )}
             <Box value={banned} padding="1rem" fontWeight="bold">
-              Show how is banned :
+               Voir qui est banni :
             </Box>
-            <Input
-              onChange={handlebanned}
-              backgroundColor="teal.600"
-              value={banned}
-            ></Input>
+            <Stack direction="row">
+              <Input
+                onChange={handlebanned}
+                backgroundColor="teal.600"
+                value={banned}
+              ></Input>
+              <Button
+                backgroundColor="whiteAlpha.300"
+                _hover={{ bg: "#21bdbf" }}
+              >
+                Chercher
+              </Button>
+            </Stack>
           </Box>
         </Box>
       </Box>

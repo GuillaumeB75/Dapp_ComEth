@@ -175,16 +175,7 @@ const SubmitProposalForm = () => {
             margin="1rem"
           />
           <Center>
-            <Circle
-              as="button"
-              backgroundColor="whiteAlpha.400"
-              p="1rem"
-              m="0.5rem"
-              fontWeight="bold"
-              onClick={handleSubmitAll}
-            >
-              Valider
-            </Circle>
+          <Circle as="button" backgroundColor="whiteAlpha.400" p="1rem" m="0.5rem" fontWeight="bold" onClick={handleSubmitAll} _hover= {{bg:"#21bdbf"}}>Valider</Circle>
           </Center>
         </FormControl>
       </Center>
