@@ -6,7 +6,8 @@ const Stats = () => {
   return (
     <>
       <Box
-        h={{ sm: "91.7vh", lg: "91.7vh" }}
+        minH="91.7vh"
+        maxW="100%"
         w="100%"
         bgGradient="linear(to-t,teal.600, teal.400);"
       >
