@@ -66,7 +66,6 @@ const CreateComethForm = () => {
       };
     }
   }, [
-
     comEthFactory,
     web3State.account,
     toast,
@@ -74,15 +73,36 @@ const CreateComethForm = () => {
     comEthAddress,
     //userFilter,
   ]);
-  
 
   return (
     <>
-      <Box boxShadow="lg" w="35rem" p="1rem" mt="3rem" rounded="md" backgroundColor="blackAlpha.200">
-        <Box fontWeight="bold" backgroundColor="teal.400" boxShadow="inner" p="0.5rem" rounded="md">
+      <Box
+        boxShadow="lg"
+        w="35rem"
+        p="1rem"
+        mt="3rem"
+        rounded="md"
+        backgroundColor="blackAlpha.200"
+      >
+        <Box
+          fontWeight="bold"
+          backgroundColor="teal.400"
+          boxShadow="inner"
+          p="0.5rem"
+          rounded="md"
+        >
           Explication sur la création d'une communoté Ethereum
         </Box>
-        <Circle fontWeight="bold" backgroundColor="whiteAlpha.400" boxShadow="lg" onClick={handleClickCreate}  _hover= {{bg:"#0db5aa"}} _selected={{bg:"#17d4c7"}} p="0.5em" margin="2rem">
+        <Circle
+          fontWeight="bold"
+          backgroundColor="whiteAlpha.400"
+          boxShadow="lg"
+          onClick={handleClickCreate}
+          _hover={{ bg: "#0db5aa" }}
+          _selected={{ bg: "#17d4c7" }}
+          p="0.5em"
+          margin="2rem"
+        >
           Create your account
         </Circle>
       </Box>
