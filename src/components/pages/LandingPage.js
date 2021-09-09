@@ -4,8 +4,13 @@ import LandingPageTemplate from "../templates/LandingPageTemplate";
 const LandingPage = () => {
   return (
     <>
-    {/* TODO : faire la page front joulie  */}
-      <Box minH="100vh" maxH="100%" w="100%" bgGradient="linear(to-t,blue.100, blue.400);">
+      {/* TODO : faire la page front joulie  */}
+      <Box
+        minH="100vh"
+        maxH="100%"
+        w="100%"
+        bgGradient="linear(to-t,blue.100, blue.400);"
+      >
         <LandingPageTemplate />
       </Box>
     </>

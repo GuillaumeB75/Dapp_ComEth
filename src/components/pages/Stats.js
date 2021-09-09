@@ -7,8 +7,13 @@ const Stats = () => {
   const comEth = useContext(ComEthContext);
   return (
     <>
-    <Box minH="100vh" maxH="100%" w="100%"  bgGradient="linear(to-t,teal.600, teal.400);">
-      <StatsTemplate />
+      <Box
+        minH="100vh"
+        maxH="100%"
+        w="100%"
+        bgGradient="linear(to-t,teal.600, teal.400);"
+      >
+        <StatsTemplate />
       </Box>
     </>
   );

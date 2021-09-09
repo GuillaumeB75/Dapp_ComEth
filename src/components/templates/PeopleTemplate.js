@@ -39,10 +39,10 @@ const PeopleTemplate = () => {
     <>
       <Center>
         <Heading
-          mt={{base:"2rem", sm:"1rem",lg:"6rem"}}
-          ml={{md:"5rem"}}
+          mt={{ base: "2rem", sm: "1rem", lg: "6rem" }}
+          ml={{ md: "5rem" }}
           textAlign="center"
-          fontSize={{base:"xl", sm:"4xl"}}
+          fontSize={{ base: "xl", sm: "4xl" }}
           fontFamily="mono"
         >
           Membre de ma ComEhnauté
@@ -58,7 +58,15 @@ const PeopleTemplate = () => {
         p="1rem"
       >
         <Center>
-        <Box backgroundColor="#2ac9c7" rounded="md" p="1rem" fontWeight="bold" m="1rem">Activités au seint de la ComEth</Box>
+          <Box
+            backgroundColor="#2ac9c7"
+            rounded="md"
+            p="1rem"
+            fontWeight="bold"
+            m="1rem"
+          >
+            Activités au seint de la ComEth
+          </Box>
         </Center>
         <Box mt="2rem">
           <Box m="2rem" ml={{ md: "1rem" }}>
@@ -120,7 +128,7 @@ const PeopleTemplate = () => {
               </Circle>
             )}
             <Box value={banned} padding="1rem" fontWeight="bold">
-               Voir qui est banni :
+              Voir qui est banni :
             </Box>
             <Stack direction="row">
               <Input

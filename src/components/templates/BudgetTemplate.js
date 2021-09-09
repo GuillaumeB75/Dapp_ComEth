@@ -30,7 +30,7 @@ const BudgetTemplate = () => {
       <Center>
         <Heading
           ml={{ md: "6rem" }}
-          mt={{base:"3rem", sm: "5rem", lg: "8rem" }}
+          mt={{ base: "3rem", sm: "5rem", lg: "8rem" }}
           textAlign="center"
           fontSize="4xl"
           w={{ sm: "70%" }}
@@ -41,13 +41,13 @@ const BudgetTemplate = () => {
       </Center>
       <Box
         boxShadow="lg"
-        ml={{base:"1rem", sm: "1rem", md: "14rem", lg: "24rem" }}
-        mr={{base:"1rem", sm: "1rem" }}
+        ml={{ base: "1rem", sm: "1rem", md: "14rem", lg: "24rem" }}
+        mr={{ base: "1rem", sm: "1rem" }}
         p="2rem"
-        mt={{base:"3rem", sm: "6rem" }}
+        mt={{ base: "3rem", sm: "6rem" }}
         rounded="md"
         backgroundColor="blackAlpha.200"
-        w={{ md: "55%", lg: "45%", xl:"30%" }}
+        w={{ md: "55%", lg: "45%", xl: "30%" }}
       >
         <Box
           boxShadow="inner"
@@ -61,50 +61,50 @@ const BudgetTemplate = () => {
           Définir les budget alloué - à venir - totaux
         </Box>
         <Stack direction="row">
-        <Box
-          boxShadow="inner"
-          onChange={handleBalance}
-          fontWeight="bold"
-          fontSize={{base:"sm",sm:"md"}}
-          backgroundColor="teal.400"
-          w={{sm:"80%", lg:"90%"}}
-          p="0.5rem"
-          mb="2rem"
-          rounded="lg"
-        >
-          Get Balance getBalance : {balance}
-        </Box>
-        <Button
-                backgroundColor="whiteAlpha.300"
-                _hover={{ bg: "#21bdbf" }}
-                fontSize={{base:"sm",sm:"md"}}
-                m="10rem"
-              >
-                Chercher
-              </Button>
+          <Box
+            boxShadow="inner"
+            onChange={handleBalance}
+            fontWeight="bold"
+            fontSize={{ base: "sm", sm: "md" }}
+            backgroundColor="teal.400"
+            w={{ sm: "80%", lg: "90%" }}
+            p="0.5rem"
+            mb="2rem"
+            rounded="lg"
+          >
+            Get Balance getBalance : {balance}
+          </Box>
+          <Button
+            backgroundColor="whiteAlpha.300"
+            _hover={{ bg: "#21bdbf" }}
+            fontSize={{ base: "sm", sm: "md" }}
+            m="10rem"
+          >
+            Chercher
+          </Button>
         </Stack>
         <Stack direction="row">
-        <Box
-          boxShadow="inner"
-          onChange={handleInvest}
-          fontWeight="bold"
-          fontSize={{base:"sm",sm:"md"}}
-          backgroundColor="teal.400"
-          w={{sm:"80%", lg:"90%"}}
-          p="0.5rem"
-          rounded="lg"
-          s
-        >
-          getInvestmentBalance : {invest}
-        </Box>
-        <Button
-                backgroundColor="whiteAlpha.300"
-                fontSize={{base:"sm",sm:"md"}}
-                _hover={{ bg: "#21bdbf" }}
-              >
-                Chercher
-              </Button>
-      </Stack>
+          <Box
+            boxShadow="inner"
+            onChange={handleInvest}
+            fontWeight="bold"
+            fontSize={{ base: "sm", sm: "md" }}
+            backgroundColor="teal.400"
+            w={{ sm: "80%", lg: "90%" }}
+            p="0.5rem"
+            rounded="lg"
+            s
+          >
+            getInvestmentBalance : {invest}
+          </Box>
+          <Button
+            backgroundColor="whiteAlpha.300"
+            fontSize={{ base: "sm", sm: "md" }}
+            _hover={{ bg: "#21bdbf" }}
+          >
+            Chercher
+          </Button>
+        </Stack>
       </Box>
     </>
   );

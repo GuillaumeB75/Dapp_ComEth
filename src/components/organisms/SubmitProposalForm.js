@@ -104,8 +104,17 @@ const SubmitProposalForm = () => {
   return (
     <>
       <Center>
-        <FormControl boxShadow="lg" backgroundColor="blackAlpha.200" padding="2rem" w={{sm:"86%" ,md:"43rem",lg:"45rem"}} ml={{sm:"0.5rem", md:"9rem"}} mt={{base:"3rem",sm:"2rem"}} >
-          <FormLabel fontWeight="bold" isRequired>Titre de proposition proposition</FormLabel>
+        <FormControl
+          boxShadow="lg"
+          backgroundColor="blackAlpha.200"
+          padding="2rem"
+          w={{ sm: "86%", md: "43rem", lg: "45rem" }}
+          ml={{ sm: "0.5rem", md: "9rem" }}
+          mt={{ base: "3rem", sm: "2rem" }}
+        >
+          <FormLabel fontWeight="bold" isRequired>
+            Titre de proposition proposition
+          </FormLabel>
           <Input
             onChange={handleChangeProposition}
             backgroundColor="teal.600"
@@ -166,7 +175,17 @@ const SubmitProposalForm = () => {
             margin="1rem"
           />
           <Center>
-          <Circle as="button" backgroundColor="whiteAlpha.400" p="1rem" m="0.5rem" fontWeight="bold" onClick={handleSubmitAll} _hover= {{bg:"#21bdbf"}}>Valider</Circle>
+            <Circle
+              as="button"
+              backgroundColor="whiteAlpha.400"
+              p="1rem"
+              m="0.5rem"
+              fontWeight="bold"
+              onClick={handleSubmitAll}
+              _hover={{ bg: "#21bdbf" }}
+            >
+              Valider
+            </Circle>
           </Center>
         </FormControl>
       </Center>
