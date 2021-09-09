@@ -21,8 +21,8 @@ const LandingPageTemplate = () => {
         <Heading>
           <Text
             textShadow="3px 3px #43A2F7"
-            mt={{ sm: "10rem", lg: "10rem" }}
-            fontSize="100px"
+            mt={{sm:"10rem", lg:"10rem"}}
+            fontSize={{sm:"100px",lg:"100px"}}
             color="blue.700"
             margin="4rem"
           >
@@ -32,7 +32,7 @@ const LandingPageTemplate = () => {
       </Center>
       <Center marginBottom="4rem">
         <Text
-          color={"gray.500"}
+          color={"gray.600"}
           maxW={"4xl"}
           ml={{ sm: "0.5rem" }}
           mr={{ sm: "0.5rem" }}
@@ -41,7 +41,7 @@ const LandingPageTemplate = () => {
           textAlign="center"
           fontStyle="italic"
           fontWeight="bold"
-          fontSize="25px"
+          fontSize={{sm:"24px",lg:"25px"}}
         >
           A new possibility to create communities and manage sharing funds
         </Text>
@@ -49,10 +49,10 @@ const LandingPageTemplate = () => {
       <Center>
         <Link to={web3State.isLogged ? "/create" : "/"}>
           <Circle
-            as="button"
-            backgroundColor="blue.500"
-            fontWeight="bold"
-            p="1rem"
+          as="button"
+          backgroundColor="blue.500"
+          fontWeight="bold"
+          p={{sm:"0.8rem",lg:"1rem"}}
             marginRight="2rem"
             colorScheme="blue"
             onClick={() => handleOnClickLogin()}
@@ -65,10 +65,10 @@ const LandingPageTemplate = () => {
 
         <Link to={web3State.isLogged ? "/login" : "/"}>
           <Circle
-            as="button"
-            fontWeight="bold"
-            p="1rem"
-            backgroundColor="blue.500"
+          as="button"
+          fontWeight="bold"
+          p={{sm:"0.8rem",lg:"1rem"}}
+          backgroundColor="blue.500"
             marginLeft="2rem"
             colorScheme="blue"
             onClick={() => handleOnClickLogin()}

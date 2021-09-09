@@ -9,8 +9,8 @@ const Info = () => {
   return (
     <>
       <Box minH="100vh" maxH="100%" bgGradient="linear(to-t,teal.600, teal.400);">
-        <InfoTemplate />
         <NavInfoOnly />
+        <InfoTemplate />
       </Box>
     </>
   );

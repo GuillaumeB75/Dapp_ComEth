@@ -13,6 +13,7 @@ const NavInfoOnly = () => {
     <>
       <Box
         pos="absolute"
+        display={{base:"none",sm:"none",md:" list-item"}}
         top="0"
         h="100%"
         w={{ sm: "8rem", md: "9rem", lg: "10rem" }}

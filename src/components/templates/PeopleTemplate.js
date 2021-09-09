@@ -39,11 +39,11 @@ const PeopleTemplate = () => {
     <>
       <Center>
         <Heading
-          mt={{ sm: "5rem", lg: "8rem" }}
-          ml={{ sm: "8rem" }}
+          mt={{base:"2rem", sm:"1rem",lg:"6rem"}}
+          ml={{md:"5rem"}}
           textAlign="center"
-          fontSize="4xl"
-          fontFamily="fantasy"
+          fontSize={{base:"xl", sm:"4xl"}}
+          fontFamily="mono"
         >
           Membre de ma ComEhnauté
         </Heading>
@@ -51,9 +51,9 @@ const PeopleTemplate = () => {
       <Box
         rounded="md"
         boxShadow="lg"
-        mt={{ sm: "8rem" }}
-        ml={{ sm: "9rem", md: "13rem", lg: "19rem" }}
-        w={{ sm: "65%", md: "58%", lg: "40%" }}
+        mt={{ sm: "4rem" }}
+        ml={{ sm: "3rem", md: "11rem", lg: "19rem" }}
+        w={{ sm: "80%", md: "75%", lg: "40%" }}
         backgroundColor="blackAlpha.200"
         p="1rem"
       >

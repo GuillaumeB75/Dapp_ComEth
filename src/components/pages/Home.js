@@ -14,8 +14,8 @@ const Home = () => {
   return (
     <>
       <Box w="100%" minH="100vh"  bgGradient="linear(to-t,teal.600, teal.400);">
-        <HomeTemplate />
         <NavLat />
+        <HomeTemplate />
         
       </Box>
     </>

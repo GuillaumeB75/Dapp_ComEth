@@ -104,17 +104,8 @@ const SubmitProposalForm = () => {
   return (
     <>
       <Center>
-        <FormControl
-          boxShadow="lg"
-          backgroundColor="blackAlpha.200"
-          padding="2rem"
-          w={{ sm: "68%", md: "43rem", lg: "45rem" }}
-          ml={{ sm: "8rem", md: "9rem" }}
-          mt="2rem"
-        >
-          <FormLabel fontWeight="bold" isRequired>
-            Titre de proposition proposition
-          </FormLabel>
+        <FormControl boxShadow="lg" backgroundColor="blackAlpha.200" padding="2rem" w={{sm:"86%" ,md:"43rem",lg:"45rem"}} ml={{sm:"0.5rem", md:"9rem"}} mt={{base:"3rem",sm:"2rem"}} >
+          <FormLabel fontWeight="bold" isRequired>Titre de proposition proposition</FormLabel>
           <Input
             onChange={handleChangeProposition}
             backgroundColor="teal.600"

@@ -1,14 +1,20 @@
 import React from "react";
-import {  Box} from "@chakra-ui/react";
+import {  Box, Stack,Spacer} from "@chakra-ui/react";
 import Logo from "../atoms/Logo";
+import MobilNav from "../atoms/MobilNav";
 
 const MainHeader = () => {
     return (
         <>
-            <Box  right="0" left="0" w="100%" backgroundColor="teal.400" >
-                <Box  pos="sticky" marginRight="113rem">
+            <Box pos="sticky" w="100%" backgroundColor="teal.400" >
+                <Stack direction="row">
                 <Logo />
+                <Spacer/>
+                <Box display={{base:"flex", sm:"flex", md:"none"}}>
+                <MobilNav/>
+                
                 </Box>
+                </Stack>
             </Box>
         </>
     );
