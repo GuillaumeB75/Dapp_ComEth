@@ -1,14 +1,14 @@
 import React from "react";
-import { Button } from "@chakra-ui/react";
-import { SearchIcon } from "@chakra-ui/icons";
+import { Circle } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const BudgetButton = () => {
   return (
     <>
       <Link to="/budget">
-        <Button
-          
+        <Circle
+          as="button"
+          fontWeight="bold"
           backgroundColor="whiteAlpha.700"
           w="85%"
           m="3%"
@@ -17,8 +17,8 @@ const BudgetButton = () => {
           _hover={{ bg: "#21bdbf" }}
           _selected={{ bg: "#17d4c7" }}
         >
-        <SearchIcon />
-        </Button>
+          Budget
+        </Circle>
       </Link>
     </>
   );
