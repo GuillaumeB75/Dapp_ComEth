@@ -17,18 +17,25 @@ const VoteTemplate = () => {
   //const comEth = useContext(ComEthContext);
 
   //const toast = useToast();
-  
+
   return (
     <>
       <Center>
-        <Heading marginBottom="2rem" ml={{sm:"6rem"}} fontSize="4xl" fontFamily="fantasy">Just Vote</Heading>
+        <Heading
+          marginBottom="2rem"
+          ml={{ sm: "6rem" }}
+          fontSize="4xl"
+          fontFamily="fantasy"
+        >
+          Just Vote
+        </Heading>
       </Center>
       <Center>
         <Box
           mt={{ sm: "4rem", md: "6rem", lg: "9rem" }}
           ml={{ sm: "8rem", md: "9rem" }}
           boxShadow="lg"
-          w={{sm:"24rem",lg:"40rem"}}
+          w={{ sm: "24rem", lg: "40rem" }}
           backgroundColor="blackAlpha.200"
         >
           <FormControl id="country" w="32rem" margin="2rem">
@@ -38,7 +45,7 @@ const VoteTemplate = () => {
             <Select
               boxShadow="lg"
               margin="1rem"
-              w={{sm:"60%", md:"59%", lg:"80%"}}
+              w={{ sm: "60%", md: "59%", lg: "80%" }}
               placeholder="Selectionnez votre réponse"
             >
               <option>Oui</option>

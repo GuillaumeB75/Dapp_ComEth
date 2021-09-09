@@ -7,8 +7,7 @@ import FooterLandingPage from "../organisms/FooterLandingPage";
 
 const LandingPageTemplate = () => {
   const [web3State, login] = useContext(Web3Context);
-  console.log("me",web3State.account);
-
+  console.log("me", web3State.account);
 
   const handleOnClickLogin = () => {
     if (!web3State.isLogged) {
@@ -22,7 +21,7 @@ const LandingPageTemplate = () => {
         <Heading>
           <Text
             textShadow="3px 3px #43A2F7"
-            mt={{sm:"10rem", lg:"10rem"}}
+            mt={{ sm: "10rem", lg: "10rem" }}
             fontSize="100px"
             color="blue.700"
             margin="4rem"
@@ -35,10 +34,10 @@ const LandingPageTemplate = () => {
         <Text
           color={"gray.500"}
           maxW={"4xl"}
-          ml={{sm:"0.5rem"}}
-          mr={{sm:"0.5rem"}}
-          mt={{lg:"2rem"}}
-          mb={{lg:"1rem"}}
+          ml={{ sm: "0.5rem" }}
+          mr={{ sm: "0.5rem" }}
+          mt={{ lg: "2rem" }}
+          mb={{ lg: "1rem" }}
           textAlign="center"
           fontStyle="italic"
           fontWeight="bold"
@@ -48,18 +47,17 @@ const LandingPageTemplate = () => {
         </Text>
       </Center>
       <Center>
-        
         <Link to={web3State.isLogged ? "/create" : "/"}>
           <Circle
-          as="button"
-          backgroundColor="blue.500"
-          fontWeight="bold"
-          p="1rem"
+            as="button"
+            backgroundColor="blue.500"
+            fontWeight="bold"
+            p="1rem"
             marginRight="2rem"
             colorScheme="blue"
             onClick={() => handleOnClickLogin()}
-            _hover= {{bg:"#42daf5"}}
-              _selected={{bg:"#055c6b"}}
+            _hover={{ bg: "#42daf5" }}
+            _selected={{ bg: "#055c6b" }}
           >
             Create a Community
           </Circle>
@@ -67,20 +65,19 @@ const LandingPageTemplate = () => {
 
         <Link to={web3State.isLogged ? "/login" : "/"}>
           <Circle
-          as="button"
-          fontWeight="bold"
-          p="1rem"
-          backgroundColor="blue.500"
+            as="button"
+            fontWeight="bold"
+            p="1rem"
+            backgroundColor="blue.500"
             marginLeft="2rem"
             colorScheme="blue"
             onClick={() => handleOnClickLogin()}
-              _hover= {{bg:"#42daf5"}}
-              _selected={{bg:"#055c6b"}}
+            _hover={{ bg: "#42daf5" }}
+            _selected={{ bg: "#055c6b" }}
           >
             Join a Community
           </Circle>
         </Link>
-        
       </Center>
       <FooterLandingPage />
     </>

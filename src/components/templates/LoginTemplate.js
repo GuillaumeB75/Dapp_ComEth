@@ -1,4 +1,11 @@
-import { Circle, Input, Heading, Container, Center, Box } from "@chakra-ui/react";
+import {
+  Circle,
+  Input,
+  Heading,
+  Container,
+  Center,
+  Box,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { ComEthAddressContext } from "../../App";
 import { useState, useContext } from "react";
@@ -17,7 +24,14 @@ const LoginTemplate = () => {
         <Heading margin="3rem">Join ComEth</Heading>
       </Center>
       <Container>
-        <Box boxShadow="lg" backgroundColor="blackAlpha.200" w="35rem" mt="4rem" rounded="lg" pb="0.3rem">
+        <Box
+          boxShadow="lg"
+          backgroundColor="blackAlpha.200"
+          w="35rem"
+          mt="4rem"
+          rounded="lg"
+          pb="0.3rem"
+        >
           <Input
             boxShadow="lg"
             w="32rem"
@@ -28,9 +42,20 @@ const LoginTemplate = () => {
           />
           <Link to="/home">
             <Center>
-            <Circle as="button" fontWeight="bold" w="24rem" backgroundColor="whiteAlpha.400" p="0.5em" margin="2rem" boxShadow="lg" onClick={handleClickLinkToHome}  _hover= {{bg:"#0db5aa"}} _selected={{bg:"#17d4c7"}} >
-              Join Community
-            </Circle>
+              <Circle
+                as="button"
+                fontWeight="bold"
+                w="24rem"
+                backgroundColor="whiteAlpha.400"
+                p="0.5em"
+                margin="2rem"
+                boxShadow="lg"
+                onClick={handleClickLinkToHome}
+                _hover={{ bg: "#0db5aa" }}
+                _selected={{ bg: "#17d4c7" }}
+              >
+                Join Community
+              </Circle>
             </Center>
           </Link>
         </Box>

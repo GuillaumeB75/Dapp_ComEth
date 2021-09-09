@@ -1,4 +1,13 @@
-import { Box, Circle, Center, FormControl, FormLabel, Input, Select, toast } from "@chakra-ui/react";
+import {
+  Box,
+  Circle,
+  Center,
+  FormControl,
+  FormLabel,
+  Input,
+  Select,
+  toast,
+} from "@chakra-ui/react";
 import React from "react";
 import { ComEthContext } from "../../context/ComEthContext";
 import { useContext, useEffect, useState } from "react";
@@ -6,7 +15,7 @@ import { useContext, useEffect, useState } from "react";
 
 const SubmitProposalForm = () => {
   //   const [web3State] = useContext(Web3Context);
-    const comEth = useContext(ComEthContext);
+  const comEth = useContext(ComEthContext);
   const [optionVote, setOptionVote] = useState([""]);
 
   const [proposition, setProposition] = useState({
@@ -61,10 +70,16 @@ const SubmitProposalForm = () => {
   const handleSubmitAll = async () => {
     try {
       //fonction ComEth submitProposal a remplir grace au form
-      const {voteOption, title, timeLimit, target, sum} = proposition
-      let props = await comEth.submitProposal(voteOption, title, timeLimit, target, sum)
-      console.log(comEth.address)
-      await props.wait()
+      const { voteOption, title, timeLimit, target, sum } = proposition;
+      let props = await comEth.submitProposal(
+        voteOption,
+        title,
+        timeLimit,
+        target,
+        sum
+      );
+      console.log(comEth.address);
+      await props.wait();
       toast({
         title: "Proposition send",
         description: `Your proposition : ${props}`, // hash de la transac
@@ -89,14 +104,23 @@ const SubmitProposalForm = () => {
   return (
     <>
       <Center>
-        <FormControl boxShadow="lg" backgroundColor="blackAlpha.200" padding="2rem" w={{sm:"68%" ,md:"43rem",lg:"45rem"}} ml={{sm:"8rem", md:"9rem"}} mt="2rem">
-          <FormLabel fontWeight="bold" isRequired>Titre de proposition proposition</FormLabel>
+        <FormControl
+          boxShadow="lg"
+          backgroundColor="blackAlpha.200"
+          padding="2rem"
+          w={{ sm: "68%", md: "43rem", lg: "45rem" }}
+          ml={{ sm: "8rem", md: "9rem" }}
+          mt="2rem"
+        >
+          <FormLabel fontWeight="bold" isRequired>
+            Titre de proposition proposition
+          </FormLabel>
           <Input
             onChange={handleChangeProposition}
             backgroundColor="teal.600"
             size="sm"
             boxShadow="lg"
-            w={{sm:"99%" ,md:"32rem"}}
+            w={{ sm: "99%", md: "32rem" }}
             placeholder="Salle de sport ?"
             margin="1rem"
           />
@@ -108,18 +132,20 @@ const SubmitProposalForm = () => {
             backgroundColor="teal.600"
             size="sm"
             boxShadow="lg"
-            w={{sm:"99%" ,md:"32rem"}}
+            w={{ sm: "99%", md: "32rem" }}
             placeholder={`option`}
             margin="1rem"
           />
 
-          <FormLabel p="-0" fontWeight="bold">Choisir votre limie de temps</FormLabel>
+          <FormLabel p="-0" fontWeight="bold">
+            Choisir votre limie de temps
+          </FormLabel>
           <Select
             onChange={handleChangeTimeLimit}
             backgroundColor="teal.600"
             size="sm"
             boxShadow="lg"
-            w={{sm:"99%" ,md:"32rem"}}
+            w={{ sm: "99%", md: "32rem" }}
             margin="1rem"
           >
             <option value="option1">1 semaine</option>
@@ -134,7 +160,7 @@ const SubmitProposalForm = () => {
             backgroundColor="teal.600"
             size="sm"
             boxShadow="lg"
-            w={{sm:"99%" ,md:"32rem"}}
+            w={{ sm: "99%", md: "32rem" }}
             placeholder="0,75"
             margin="1rem"
           />
@@ -144,12 +170,21 @@ const SubmitProposalForm = () => {
             backgroundColor="teal.600"
             size="sm"
             boxShadow="lg"
-            w={{sm:"99%" ,md:"32rem"}}
+            w={{ sm: "99%", md: "32rem" }}
             placeholder="0x00...."
             margin="1rem"
           />
           <Center>
-          <Circle as="button" backgroundColor="whiteAlpha.400" p="1rem" m="0.5rem" fontWeight="bold" onClick={handleSubmitAll}>Valider</Circle>
+            <Circle
+              as="button"
+              backgroundColor="whiteAlpha.400"
+              p="1rem"
+              m="0.5rem"
+              fontWeight="bold"
+              onClick={handleSubmitAll}
+            >
+              Valider
+            </Circle>
           </Center>
         </FormControl>
       </Center>

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect,  } from "react";
+import React, { createContext, useContext, useEffect } from "react";
 import { useContract } from "web3-hooks";
 import { ComEthAddressContext } from "./ComEthAddressContext";
 import { ComEthAbi } from "../contracts/comEth";
@@ -20,10 +20,9 @@ export const ComEthContextProvider = ({ children }) => {
 
   const comEth = useContract(comEthAddress, ComEthAbi);
 
-
-  useEffect(()=>{
+  useEffect(() => {
     console.log("ComEthContextProvider", comEthAddress);
-  })
+  });
 
   return (
     <ComEthContext.Provider value={comEth}>{children}</ComEthContext.Provider>
