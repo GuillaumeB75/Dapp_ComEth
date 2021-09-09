@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Box, Center, Heading } from "@chakra-ui/react";
-=======
 import { Box, Center, Heading, Stack, Button } from "@chakra-ui/react";
->>>>>>> eb8fd9e0125399548615876db4c321e9edcfbc14
 import { useContext, useState } from "react";
 import { ComEthContext } from "../../context/ComEthContext";
 
@@ -57,39 +53,26 @@ const BudgetTemplate = () => {
           boxShadow="inner"
           textAlign="center"
           fontWeight="bold"
-<<<<<<< HEAD
-          backgroundColor="teal.400"
-=======
           backgroundColor="#2ac9c7"
->>>>>>> eb8fd9e0125399548615876db4c321e9edcfbc14
           p="1rem"
           mb="2rem"
           rounded="lg"
         >
           Définir les budget alloué - à venir - totaux
         </Box>
-<<<<<<< HEAD
-=======
         <Stack direction="row">
->>>>>>> eb8fd9e0125399548615876db4c321e9edcfbc14
         <Box
           boxShadow="inner"
           onChange={handleBalance}
           fontWeight="bold"
           backgroundColor="teal.400"
-<<<<<<< HEAD
-          p="3%"
-=======
           w={{sm:"80%", lg:"90%"}}
           p="0.5rem"
->>>>>>> eb8fd9e0125399548615876db4c321e9edcfbc14
           mb="2rem"
           rounded="lg"
         >
           Get Balance getBalance : {balance}
         </Box>
-<<<<<<< HEAD
-=======
         <Button
                 backgroundColor="whiteAlpha.300"
                 _hover={{ bg: "#21bdbf" }}
@@ -99,25 +82,18 @@ const BudgetTemplate = () => {
               </Button>
         </Stack>
         <Stack direction="row">
->>>>>>> eb8fd9e0125399548615876db4c321e9edcfbc14
         <Box
           boxShadow="inner"
           onChange={handleInvest}
           fontWeight="bold"
           backgroundColor="teal.400"
-<<<<<<< HEAD
-          p="3%"
-=======
           w={{sm:"80%", lg:"90%"}}
           p="0.5rem"
->>>>>>> eb8fd9e0125399548615876db4c321e9edcfbc14
           rounded="lg"
           s
         >
           getInvestmentBalance : {invest}
         </Box>
-<<<<<<< HEAD
-=======
         <Button
                 backgroundColor="whiteAlpha.300"
                 _hover={{ bg: "#21bdbf" }}
@@ -125,7 +101,6 @@ const BudgetTemplate = () => {
                 Chercher
               </Button>
       </Stack>
->>>>>>> eb8fd9e0125399548615876db4c321e9edcfbc14
       </Box>
     </>
   );
