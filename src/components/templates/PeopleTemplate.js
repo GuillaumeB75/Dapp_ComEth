@@ -41,13 +41,14 @@ const PeopleTemplate = () => {
       </Center>
 
       <Box
-        rounded="md"
         boxShadow="lg"
+        ml={{ sm: "9rem", md: "16rem", lg: "26rem" }}
+        mr={{ sm: "1rem" }}
+        p="2rem"
         mt={{ sm: "8rem" }}
-        ml={{ sm: "9rem", md: "13rem", lg: "19rem" }}
-        w={{ sm: "65%", md: "58%", lg: "40%" }}
+        rounded="md"
         backgroundColor="blackAlpha.200"
-        p="1rem"
+        w={{ md: "60%", lg: "40%" }}
       >
         <Box mt="2rem">
           <Box m="2rem" ml={{ md: "1rem" }}>

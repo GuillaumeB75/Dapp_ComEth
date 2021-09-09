@@ -30,14 +30,14 @@ const StatsTemplate = () => {
         </Heading>
       </Center>
       <Box
-        backgroundColor="blackAlpha.200"
-        ml={{ sm: "9rem", md: "12rem", lg: "16rem" }}
+        boxShadow="lg"
+        ml={{ sm: "9rem", md: "16rem", lg: "26rem" }}
         mr={{ sm: "1rem" }}
-        rounded="md"
-        mt="4rem"
         p="2rem"
-        width={{ sm: "70%", md: "45%", lg: "30%" }}
-        h="55%"
+        mt={{ sm: "8rem" }}
+        rounded="md"
+        backgroundColor="blackAlpha.200"
+        w={{ md: "60%", lg: "40%" }}
       >
         <Center>
           <Box
