@@ -1,4 +1,4 @@
-export const ComEthFactoryAdress = "0xA3504d2cD5Be9F5cdC0B7EfC0895B6f13c040B3e";
+export const ComEthFactoryAdress = "0xB7dB99Ae61d7E690fac0dcA89A63C830A06cC132";
 export const ComEthFactoryAbi = [
   {
     inputs: [
@@ -28,25 +28,6 @@ export const ComEthFactoryAbi = [
       },
     ],
     name: "ComEthCreated",
-    type: "event",
-  },
-  {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: true,
-        internalType: "address",
-        name: "previousOwner",
-        type: "address",
-      },
-      {
-        indexed: true,
-        internalType: "address",
-        name: "newOwner",
-        type: "address",
-      },
-    ],
-    name: "OwnershipTransferred",
     type: "event",
   },
   {
@@ -86,39 +67,6 @@ export const ComEthFactoryAbi = [
       },
     ],
     stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "owner",
-    outputs: [
-      {
-        internalType: "address",
-        name: "",
-        type: "address",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "renounceOwnership",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "address",
-        name: "newOwner",
-        type: "address",
-      },
-    ],
-    name: "transferOwnership",
-    outputs: [],
-    stateMutability: "nonpayable",
     type: "function",
   },
 ];

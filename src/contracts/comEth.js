@@ -45,12 +45,6 @@ export const ComEthAbi = [
       },
       {
         indexed: false,
-        internalType: "uint256",
-        name: "timestamp",
-        type: "uint256",
-      },
-      {
-        indexed: false,
         internalType: "bool",
         name: "status",
         type: "bool",
@@ -249,16 +243,42 @@ export const ComEthAbi = [
     type: "function",
   },
   {
-    inputs: [
-      {
-        internalType: "address",
-        name: "userAddress_",
-        type: "address",
-      },
-    ],
+    inputs: [],
     name: "addUser",
     outputs: [],
     stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getActiveUsersNb",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "userAddress",
+        type: "address",
+      },
+    ],
+    name: "getAmountToBePaid",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
     type: "function",
   },
   {
@@ -295,69 +315,12 @@ export const ComEthAbi = [
         type: "address",
       },
     ],
-    name: "getHasPaid",
-    outputs: [
-      {
-        internalType: "bool",
-        name: "",
-        type: "bool",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "address",
-        name: "userAddress_",
-        type: "address",
-      },
-    ],
     name: "getInvestmentBalance",
     outputs: [
       {
         internalType: "uint256",
         name: "",
         type: "uint256",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "address",
-        name: "userAddress_",
-        type: "address",
-      },
-    ],
-    name: "getIsActive",
-    outputs: [
-      {
-        internalType: "bool",
-        name: "",
-        type: "bool",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "address",
-        name: "userAddress_",
-        type: "address",
-      },
-    ],
-    name: "getIsBanned",
-    outputs: [
-      {
-        internalType: "bool",
-        name: "",
-        type: "bool",
       },
     ],
     stateMutability: "view",
@@ -439,12 +402,82 @@ export const ComEthAbi = [
   },
   {
     inputs: [],
-    name: "getTime",
+    name: "getSubscriptionPrice",
     outputs: [
       {
         internalType: "uint256",
         name: "",
         type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "userAddress",
+        type: "address",
+      },
+    ],
+    name: "getUnpaidSubscriptions",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "userAddress_",
+        type: "address",
+      },
+    ],
+    name: "getUser",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "address",
+            name: "userAddress",
+            type: "address",
+          },
+          {
+            internalType: "bool",
+            name: "isBanned",
+            type: "bool",
+          },
+          {
+            internalType: "bool",
+            name: "hasPaid",
+            type: "bool",
+          },
+          {
+            internalType: "bool",
+            name: "isActive",
+            type: "bool",
+          },
+          {
+            internalType: "bool",
+            name: "exists",
+            type: "bool",
+          },
+          {
+            internalType: "uint256",
+            name: "unpaidSubscriptions",
+            type: "uint256",
+          },
+        ],
+        internalType: "struct ComEth.User",
+        name: "",
+        type: "tuple",
       },
     ],
     stateMutability: "view",
@@ -464,13 +497,6 @@ export const ComEthAbi = [
       },
     ],
     name: "grantRole",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "handleCycle",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
