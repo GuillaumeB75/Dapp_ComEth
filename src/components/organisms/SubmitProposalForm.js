@@ -93,6 +93,7 @@ const SubmitProposalForm = () => {
           <FormLabel fontWeight="bold" isRequired>Titre de proposition proposition</FormLabel>
           <Input
             onChange={handleChangeProposition}
+            backgroundColor="teal.600"
             size="sm"
             boxShadow="lg"
             w={{sm:"99%" ,md:"32rem"}}
@@ -104,6 +105,7 @@ const SubmitProposalForm = () => {
 
           <Input
             onChange={handleChangeOptions}
+            backgroundColor="teal.600"
             size="sm"
             boxShadow="lg"
             w={{sm:"99%" ,md:"32rem"}}
@@ -114,6 +116,7 @@ const SubmitProposalForm = () => {
           <FormLabel p="-0" fontWeight="bold">Choisir votre limie de temps</FormLabel>
           <Select
             onChange={handleChangeTimeLimit}
+            backgroundColor="teal.600"
             size="sm"
             boxShadow="lg"
             w={{sm:"99%" ,md:"32rem"}}
@@ -128,6 +131,7 @@ const SubmitProposalForm = () => {
           <FormLabel fontWeight="bold">Amount</FormLabel>
           <Input
             onChange={handleChangeAmount}
+            backgroundColor="teal.600"
             size="sm"
             boxShadow="lg"
             w={{sm:"99%" ,md:"32rem"}}
@@ -137,6 +141,7 @@ const SubmitProposalForm = () => {
           <FormLabel fontWeight="bold">Paiement reveiver</FormLabel>
           <Input
             onChange={handleChangeAddressReceive}
+            backgroundColor="teal.600"
             size="sm"
             boxShadow="lg"
             w={{sm:"99%" ,md:"32rem"}}

@@ -58,6 +58,8 @@ const LandingPageTemplate = () => {
             marginRight="2rem"
             colorScheme="blue"
             onClick={() => handleOnClickLogin()}
+            _hover= {{bg:"#42daf5"}}
+              _selected={{bg:"#055c6b"}}
           >
             Create a Community
           </Circle>
@@ -72,6 +74,8 @@ const LandingPageTemplate = () => {
             marginLeft="2rem"
             colorScheme="blue"
             onClick={() => handleOnClickLogin()}
+              _hover= {{bg:"#42daf5"}}
+              _selected={{bg:"#055c6b"}}
           >
             Join a Community
           </Circle>

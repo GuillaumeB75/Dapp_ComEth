@@ -31,10 +31,10 @@ const BudgetTemplate = () => {
       <Center>
       <Heading  ml={{sm:"6rem"}} textAlign="center" fontSize="4xl" fontFamily="fantasy">Les budgets de votre ComEth</Heading>
       </Center>
-      <Box pl="12rem" pt="2rem">
-      <Box>définir les budget alloué - a venir - totaux</Box>
-      <Box onChange={handleBalance} padding="1rem">Get Balance getBalance : {balance}</Box>
-      <Box onChange={handleInvest}>getInvestmentBalance :  {invest}</Box>
+      <Box boxShadow="lg" ml={{sm:"9rem", md:"16rem",lg:"26rem"}} mr={{sm:"1rem"}} p="2rem" mt={{sm:"8rem"}} rounded="md" backgroundColor="blackAlpha.200" w={{md:"60%",lg:"40%"}}>
+      <Box boxShadow="inner" textAlign="center" fontWeight="bold" backgroundColor="teal.400" p="1rem" mb="2rem" rounded="lg">Définir les budget alloué - à venir - totaux</Box>
+      <Box boxShadow="inner" onChange={handleBalance} fontWeight="bold" backgroundColor="teal.400" p="3%" mb="2rem" rounded="lg">Get Balance getBalance : {balance}</Box>
+      <Box boxShadow="inner" onChange={handleInvest} fontWeight="bold" backgroundColor="teal.400" p="3%" rounded="lg"s>getInvestmentBalance :  {invest}</Box>
       </Box>
       
     </>

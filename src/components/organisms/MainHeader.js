@@ -1,6 +1,5 @@
 import React from "react";
 import {  Box} from "@chakra-ui/react";
-import ToggleModeDark from "./ToggleModeDark";
 import Logo from "../atoms/Logo";
 
 const MainHeader = () => {
@@ -10,7 +9,6 @@ const MainHeader = () => {
                 <Box  pos="sticky" marginRight="113rem">
                 <Logo />
                 </Box>
-                <ToggleModeDark />
             </Box>
         </>
     );

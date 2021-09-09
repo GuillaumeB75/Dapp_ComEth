@@ -28,7 +28,7 @@ const LoginTemplate = () => {
           />
           <Link to="/home">
             <Center>
-            <Circle as="button" fontWeight="bold" w="24rem" backgroundColor="whiteAlpha.400" p="0.5em" margin="2rem" boxShadow="lg" onClick={handleClickLinkToHome}>
+            <Circle as="button" fontWeight="bold" w="24rem" backgroundColor="whiteAlpha.400" p="0.5em" margin="2rem" boxShadow="lg" onClick={handleClickLinkToHome}  _hover= {{bg:"#0db5aa"}} _selected={{bg:"#17d4c7"}} >
               Join Community
             </Circle>
             </Center>

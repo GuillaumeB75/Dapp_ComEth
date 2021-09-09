@@ -82,9 +82,9 @@ const CreateComethForm = () => {
         <Box padding="1rem">
           Comment créer votre communauté!
         </Box>
-        <Button boxShadow="lg" onClick={handleClickCreate} margin="2rem">
-          Créez votre communauté!
-        </Button>
+        <Circle fontWeight="bold" backgroundColor="whiteAlpha.400" boxShadow="lg" onClick={handleClickCreate}  _hover= {{bg:"#0db5aa"}} _selected={{bg:"#17d4c7"}} p="0.5em" margin="2rem">
+          Create your account
+        </Circle>
       </Box>
     </>
   );
