@@ -38,7 +38,7 @@ const VoteTemplate = () => {
           w={{ base: "20rem", sm: "30rem", lg: "40rem" }}
           backgroundColor="blackAlpha.200"
         >
-          <FormControl w={{ base: "17rem", sm: "32rem" }} margin="2rem">
+          <FormControl w={{base:"17rem",sm:"32rem"}} margin="2rem" position="static">
             <FormLabel fontWeight="bold" margin="1rem">
               Que diriez-vous d'une salle de sport ?
             </FormLabel>
@@ -48,10 +48,11 @@ const VoteTemplate = () => {
               fontSize={{ base: "15px" }}
               w={{ sm: "60%", md: "59%", lg: "80%" }}
               placeholder="Selectionnez votre réponse"
+              
             >
-              <option>Oui</option>
+              <option >Oui</option>
               <option>Non</option>
-              <option>Blanc</option>
+              <option >Blanc</option>
             </Select>
             <Button boxShadow="lg" margin="2rem" _hover={{ bg: "#21bdbf" }}>
               Voter

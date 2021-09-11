@@ -1,17 +1,18 @@
 import { Box, Center, Heading, Stack, Button } from "@chakra-ui/react";
-import { useContext, useState } from "react";
-import { ComEthContext } from "../../context/ComEthContext";
+import {  useState } from "react";
+import { useComEth, ComEthContext } from "../../context/ComEthContext";
 
 const BudgetTemplate = () => {
   const [balance, setGetBalance] = useState("0");
   const [invest, setInvest] = useState("0");
-  const comEth = useContext(ComEthContext);
+  const comEth = useComEth(ComEthContext);
 
   const handleBalance = async () => {
     setGetBalance(balance);
     try {
       let balances = await comEth.getBalance();
-      setGetBalance(balances);
+      setGetBalance(balances.toString());
+      console.log(balances.toString())
     } catch (e) {
       console.log(e);
     }

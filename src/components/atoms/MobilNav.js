@@ -11,40 +11,40 @@ import BudgetButton from "./BudgetButton";
 import PeopleButton from "./PeopleButton";
 
 const MobilNav = () => {
-  return (
-    <>
-      <Menu>
-        <MenuButton
-          as={IconButton}
-          aria-label="Options"
-          icon={<HamburgerIcon />}
-          size="lg"
-          backgroundColor="teal.600"
-          _hover={{ bg: "#0db5aa" }}
-          mr="1rem"
-          mt="2rem"
-        />
-        <MenuList>
-          <Box
-            pos="absolute"
-            top="0"
-            h="19.4rem"
-            w="100%"
-            rounded="md"
-            boxShadow="dark-lg"
-            backgroundColor="teal.600"
-          >
-            <VoteButton />
-            <ProposButton />
-            <InfoButton />
-            <StatsButton />
-            <BudgetButton />
-            <PeopleButton />
-          </Box>
-        </MenuList>
-      </Menu>
-    </>
-  );
+    return (
+        <>
+            <Menu pos="absolute">
+                    <MenuButton
+                        as={IconButton}
+                        aria-label="Options"
+                        icon={<HamburgerIcon />}
+                        size="lg"
+                        backgroundColor="teal.600"
+                        _hover= {{bg:"#0db5aa"}}
+                        mr="1rem"
+                        mt="2rem"
+                    />
+                    <MenuList>
+                    <Box
+              pos="absolute"
+              top="0"
+              h="19.4rem"
+              w="100%"
+              rounded="sm"
+              boxShadow="dark-lg"
+              backgroundColor="teal.600"
+            >
+              <VoteButton />
+              <ProposButton />
+              <InfoButton />
+              <StatsButton />
+              <BudgetButton />
+              <PeopleButton />
+            </Box>
+                    </MenuList>
+                </Menu>
+        </>
+    );
 };
 
 export default MobilNav;
