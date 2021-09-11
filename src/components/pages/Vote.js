@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Box } from "@chakra-ui/react";
 import NavLat from "../organisms/NavLat";
 import VoteTemplate from "../templates/VoteTemplate";
-import { ComEthContext } from "../../context/ComEthContext";
 
 const Vote = () => {
-  const comEth = useContext(ComEthContext);
+
   return (
     <>
       <Box

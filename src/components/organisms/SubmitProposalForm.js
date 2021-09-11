@@ -1,15 +1,25 @@
-import { Box, Circle, Center,  FormLabel, Input, Select, toast } from "@chakra-ui/react";
+import {
+  Box,
+  Circle,
+  Center,
+  FormLabel,
+  Input,
+  Select,
+  useToast
+} from "@chakra-ui/react";
 import React from "react";
 import { ComEthContext } from "../../context/ComEthContext";
 import { useContext, useEffect, useState } from "react";
 
 //import { Web3Context } from "web3-hooks";
-const ethers = require ("ethers") 
+const ethers = require("ethers");
 const SubmitProposalForm = () => {
   //   const [web3State] = useContext(Web3Context);
-    const comEth = useContext(ComEthContext);
+  const comEth = useContext(ComEthContext);
 
-  const [optionVote, setOptionVote] = useState([""]);
+  const [optionVote, setOptionVote] = useState([""]);;
+
+  const toast = useToast();
 
   const [proposition, setProposition] = useState({
     voteOption: optionVote,
@@ -18,13 +28,10 @@ const SubmitProposalForm = () => {
     target: "",
     sum: 0,
   });
-  //const [nbOptions, setNbOptions] = useState(1);
 
-  //const toast = useToast();
-
-  useEffect(()=>{
-    console.log(proposition)
-  },[proposition])
+  useEffect(() => {
+    console.log(proposition);
+  }, [proposition]);
 
   const handleChangeProposition = (e) => {
     try {
@@ -44,7 +51,7 @@ const SubmitProposalForm = () => {
 
   const handleChangeTimeLimit = (e) => {
     try {
-      setProposition({ ...proposition, timeLimit:Number(e.target.value) });
+      setProposition({ ...proposition, timeLimit: Number(e.target.value) });
     } catch (e) {
       console.log(e.message);
     }
@@ -58,7 +65,10 @@ const SubmitProposalForm = () => {
   };
   const handleChangeAmount = (e) => {
     try {
-      setProposition({ ...proposition, sum: ethers.utils.parseEthers(e.target.value) });
+      setProposition({
+        ...proposition,
+        sum: ethers.utils.parseEther(e.target.value),
+      });
     } catch (e) {
       console.log(e.message);
     }
@@ -68,22 +78,13 @@ const SubmitProposalForm = () => {
     try {
       //fonction ComEth submitProposal a remplir grace au form
       const { voteOption, title, timeLimit, target, sum } = proposition;
-      let props = await comEth.submitProposal(
+       await comEth.submitProposal(
         voteOption,
         title,
         timeLimit,
         target,
         sum
       );
-      console.log(comEth.address);
-      await props.wait();
-      toast({
-        title: "Proposition send",
-        description: `Your proposition : ${props}`, // hash de la transac
-        status: "success",
-        duration: 4000,
-        isClosable: true,
-      });
     } catch (e) {
       console.log(e.message);
     }
@@ -96,13 +97,41 @@ const SubmitProposalForm = () => {
   };
 
   useEffect(() => {
-    console.log(proposition);
-  }, [proposition]);
+    if(comEth){
+      const cb = (id, descriptions) => {
+        toast({
+            title: "Proposition créé",
+            description: `id de la proposition: ${id} desciprion : ${descriptions}`,
+            status: "info",
+            position: "top-right",
+            duration: 4000,
+            isClosable: true,
+          });
+          console.log(` DABIDOUDADIDA ${id},${descriptions}`)
+
+        };
+    comEth.on("ProposalCreated", cb)
+    return () => {
+      comEth.off("ProposalCreated", cb)
+    }
+    };
+  }, [comEth, toast]);
+
   return (
     <>
       <Center>
-        <Box position="static" boxShadow="lg" backgroundColor="blackAlpha.200" padding="2rem" w={{sm:"86%" ,md:"43rem",lg:"45rem"}} ml={{sm:"0.5rem", md:"9rem"}} mt={{base:"3rem",sm:"4rem"}} >
-          <FormLabel fontWeight="bold" isRequired>Titre de proposition proposition</FormLabel>
+        <Box
+          position="static"
+          boxShadow="lg"
+          backgroundColor="blackAlpha.200"
+          padding="2rem"
+          w={{ sm: "86%", md: "43rem", lg: "45rem" }}
+          ml={{ sm: "0.5rem", md: "9rem" }}
+          mt={{ base: "3rem", sm: "4rem" }}
+        >
+          <FormLabel fontWeight="bold">
+            Titre de proposition proposition
+          </FormLabel>
           <Input
             onChange={handleChangeProposition}
             backgroundColor="teal.600"
