@@ -21,6 +21,7 @@ import {
 
 
 const Dapp = ({ comEthAdr }) => {
+
   
   //console.log(window.location.pathname);
 

@@ -27,14 +27,14 @@ const LoginTemplate = () => {
         <Box
           boxShadow="lg"
           backgroundColor="blackAlpha.200"
-          w="35rem"
+          w={{base:"99%",md:"35rem"}}
           mt="4rem"
           rounded="lg"
           pb="0.3rem"
         >
           <Input
             boxShadow="lg"
-            w="32rem"
+            w={{base:"90%",md:"32rem"}}
             placeholder="enter Your ComEth address"
             margin="1rem"
             value={address}
