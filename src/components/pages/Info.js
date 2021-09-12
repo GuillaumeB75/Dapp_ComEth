@@ -1,11 +1,9 @@
-import React from "react"
+import React from "react";
 import { Box } from "@chakra-ui/react";
 import NavInfoOnly from "../organisms/NavInfoOnly";
 import InfoTemplate from "../templates/InfoTemplate";
 
 const Info = () => {
-
-  
   return (
     <>
       <Box

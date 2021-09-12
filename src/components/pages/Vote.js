@@ -4,7 +4,6 @@ import NavLat from "../organisms/NavLat";
 import VoteTemplate from "../templates/VoteTemplate";
 
 const Vote = () => {
-
   return (
     <>
       <Box

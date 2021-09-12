@@ -1,5 +1,5 @@
 import { Box, Center, Heading, Stack, Button } from "@chakra-ui/react";
-import {  useState } from "react";
+import { useState } from "react";
 import { useComEth, ComEthContext } from "../../context/ComEthContext";
 
 const BudgetTemplate = () => {
@@ -12,7 +12,7 @@ const BudgetTemplate = () => {
     try {
       let balances = await comEth.getBalance();
       setGetBalance(balances.toString());
-      console.log(balances.toString())
+      console.log(balances.toString());
     } catch (e) {
       console.log(e);
     }

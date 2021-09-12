@@ -4,7 +4,6 @@ import NavInfoOnly from "../organisms/NavInfoOnly";
 import PeopleTemplate from "../templates/PeopleTemplate";
 
 const People = () => {
-
   return (
     <>
       <Box

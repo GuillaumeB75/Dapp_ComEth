@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Circle, Center} from "@chakra-ui/react";
+import { Circle, Center } from "@chakra-ui/react";
 import { ComEthContext } from "../../context/ComEthContext";
 
 const AddUserAndPay = () => {
@@ -33,7 +33,7 @@ const AddUserAndPay = () => {
           p="1rem"
           textAlign="center"
           fontWeight="bold"
-          _hover= {{bg:"#1e3b45"}}
+          _hover={{ bg: "#1e3b45" }}
         >
           {" "}
           Se rajouter dans la ComEth
@@ -45,7 +45,7 @@ const AddUserAndPay = () => {
           p="1rem"
           textAlign="center"
           fontWeight="bold"
-          _hover= {{bg:"#1e3b45"}}
+          _hover={{ bg: "#1e3b45" }}
         >
           {" "}
           Se mettre à jour

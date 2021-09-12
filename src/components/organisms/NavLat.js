@@ -1,6 +1,4 @@
-import {
-    Box,
-} from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { React } from "react";
 import VoteButton from "../atoms/VoteButton";
 import ProposButton from "../atoms/ProposButton";

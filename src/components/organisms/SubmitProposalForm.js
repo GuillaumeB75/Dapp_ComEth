@@ -5,7 +5,7 @@ import {
   FormLabel,
   Input,
   Select,
-  useToast
+  useToast,
 } from "@chakra-ui/react";
 import React from "react";
 import { ComEthContext } from "../../context/ComEthContext";
@@ -17,7 +17,7 @@ const SubmitProposalForm = () => {
   //   const [web3State] = useContext(Web3Context);
   const comEth = useContext(ComEthContext);
 
-  const [optionVote, setOptionVote] = useState([""]);;
+  const [optionVote, setOptionVote] = useState([""]);
 
   const toast = useToast();
 
@@ -78,13 +78,7 @@ const SubmitProposalForm = () => {
     try {
       //fonction ComEth submitProposal a remplir grace au form
       const { voteOption, title, timeLimit, target, sum } = proposition;
-       await comEth.submitProposal(
-        voteOption,
-        title,
-        timeLimit,
-        target,
-        sum
-      );
+      await comEth.submitProposal(voteOption, title, timeLimit, target, sum);
     } catch (e) {
       console.log(e.message);
     }
@@ -97,24 +91,23 @@ const SubmitProposalForm = () => {
   };
 
   useEffect(() => {
-    if(comEth){
+    if (comEth) {
       const cb = (id, descriptions) => {
         toast({
-            title: "Proposition créé",
-            description: `id de la proposition: ${id} desciprion : ${descriptions}`,
-            status: "info",
-            position: "top-right",
-            duration: 4000,
-            isClosable: true,
-          });
-          console.log(` DABIDOUDADIDA ${id},${descriptions}`)
-
-        };
-    comEth.on("ProposalCreated", cb)
-    return () => {
-      comEth.off("ProposalCreated", cb)
+          title: "Proposition créé",
+          description: `id de la proposition: ${id} desciprion : ${descriptions}`,
+          status: "info",
+          position: "top-right",
+          duration: 4000,
+          isClosable: true,
+        });
+        console.log(` DABIDOUDADIDA ${id},${descriptions}`);
+      };
+      comEth.on("ProposalCreated", cb);
+      return () => {
+        comEth.off("ProposalCreated", cb);
+      };
     }
-    };
   }, [comEth, toast]);
 
   return (

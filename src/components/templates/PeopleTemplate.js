@@ -11,31 +11,28 @@ import { useContext, useState } from "react";
 import { ComEthContext } from "../../context/ComEthContext";
 
 const PeopleTemplate = () => {
-  const [active, setActive] = useState("")
-  const [banned, setBanned] = useState("")
-  const [estActif, setEstActif] = useState(false)
-  const [estBanni, setEstBanni] = useState(false)
+  const [active, setActive] = useState("");
+  const [banned, setBanned] = useState("");
+  const [estActif, setEstActif] = useState(false);
+  const [estBanni, setEstBanni] = useState(false);
   const comEth = useContext(ComEthContext);
 
   const handleAddress = (e) => {
     try {
-      setActive(e.target.value)
-    }catch(e){
-    }
-  }
+      setActive(e.target.value);
+    } catch (e) {}
+  };
   const handleAddressBan = (e) => {
     try {
-      setBanned(e.target.value)
-    }catch(e){
-    }
-  }
+      setBanned(e.target.value);
+    } catch (e) {}
+  };
 
   const handlActive = async (e) => {
-    
     try {
-     const act =  await comEth.getUser(active);
-     setEstActif(act.hasPaid)
-     console.log("banni ou pas :", act.hasPaid)
+      const act = await comEth.getUser(active);
+      setEstActif(act.hasPaid);
+      console.log("banni ou pas :", act.hasPaid);
     } catch (e) {
       console.log(e.error);
     }
@@ -44,8 +41,8 @@ const PeopleTemplate = () => {
   const handlebanned = async (e) => {
     try {
       const ban = await comEth.getUser(banned);
-      setEstBanni(ban.isBanned)
-      console.log("banni ou pas :", ban.isBanned)
+      setEstBanni(ban.isBanned);
+      console.log("banni ou pas :", ban.isBanned);
     } catch (e) {
       console.log(e.error);
     }
@@ -114,7 +111,7 @@ const PeopleTemplate = () => {
                 backgroundColor="teal.600"
               ></Input>
               <Button
-              onClick={handlActive}
+                onClick={handlActive}
                 backgroundColor="whiteAlpha.300"
                 _hover={{ bg: "#21bdbf" }}
               >
@@ -143,7 +140,7 @@ const PeopleTemplate = () => {
               </Circle>
             )}
             <Box padding="1rem" fontWeight="bold">
-               Voir qui est banni :
+              Voir qui est banni :
             </Box>
             <Stack direction="row">
               <Input
