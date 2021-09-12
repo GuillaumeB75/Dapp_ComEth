@@ -12,7 +12,7 @@ const BudgetTemplate = () => {
     try {
       let balances = await comEth.getBalance();
       setGetBalance(balances.toString());
-      console.log(balances.toString());
+      console.log("balance",balance)
     } catch (e) {
       console.log(e);
     }

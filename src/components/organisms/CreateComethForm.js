@@ -1,5 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { Box, Circle, useToast, Input, Center } from "@chakra-ui/react";
+import { Redirect } from "react-router-dom";
 
 import { ComEthFactoryContext } from "../../App";
 import { ComEthAddressContext } from "../../App";
@@ -8,6 +9,7 @@ import { Web3Context } from "web3-hooks";
 import { ethers } from 'ethers';
 
 const CreateComethForm = () => {
+  const [created , setCreated ] = useState(false)
   const [web3State] = useContext(Web3Context);
   const comEthFactory = useContext(ComEthFactoryContext);
   const { comEthAddress, setComEthAddress } = useContext(ComEthAddressContext);
@@ -44,6 +46,7 @@ const CreateComethForm = () => {
         });
       }
       console.log(e);
+      
     }
   };
   useEffect(() => {
@@ -62,7 +65,6 @@ const CreateComethForm = () => {
             isClosable: true,
           });
         }
-        console.log("hello");
         console.log(
           `comEthOwner: ${ComEthOwner} comEthAddress: ${ComEthAddress}`
         );
@@ -72,6 +74,7 @@ const CreateComethForm = () => {
       return () => {
         // arreter d'ecouter lorsque le component sera unmount
         comEthFactory.off("ComEthCreated", cb);
+        setCreated(!created);
       };
     }
   }, [
@@ -80,7 +83,7 @@ const CreateComethForm = () => {
     toast,
     setComEthAddress,
     comEthAddress,
-    //userFilter,
+    created,
   ]);
 
   return (
@@ -141,6 +144,7 @@ const CreateComethForm = () => {
           Create your account
         </Circle>
       </Box>
+      {created && <Redirect exact from="/create" to="/home" />}
     </>
   );
 };

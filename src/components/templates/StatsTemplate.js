@@ -76,7 +76,8 @@ const StatsTemplate = () => {
       <Box backgroundColor="blackAlpha.200" ml={{base:"1rem",sm:"2rem",md:"12rem",lg:"16rem"}} mr={{base:"1rem", sm:"2rem"}} rounded="md" mt={{base:"2rem",sm:"4rem"}} p="2rem" width={{sm:"90%",md:"75%",lg:"50%"}} maxW="35rem" h="55%">
         <Center><Box p="7%" rounded="md" backgroundColor="#2ac9c7" fontWeight="bold" textAlign="center">Dernière proposition voter/ou à voter</Box></Center>
           <Box fontWeight="bold" textAlign="center"m="3%">Rechercher avec l'id de la proposition</Box>
-        <Center>
+        <Center> 
+          <Box mr="1rem" ml="1.5rem">ID</Box>
           <Input w="40%" onChange={handleId} mr="1rem" placeholder="0"></Input>
           <Circle backgroundColor="whiteAlpha.200" fontWeight="bold" p="0.5rem" w="40%" onClick={handleProposal} _hover= {{bg:"#21bdbf"}}>Rechercher</Circle>
         </Center>
