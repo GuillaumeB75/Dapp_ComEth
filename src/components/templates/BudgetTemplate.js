@@ -1,18 +1,17 @@
 import { Box, Center, Heading, Stack, Button } from "@chakra-ui/react";
-import { useState } from "react";
-import { useComEth, ComEthContext } from "../../context/ComEthContext";
+import {  useContext, useState } from "react";
+import { ComEthContext } from "../../context/ComEthContext";
 
 const BudgetTemplate = () => {
   const [balance, setGetBalance] = useState("0");
   const [invest, setInvest] = useState("0");
-  const comEth = useComEth(ComEthContext);
+  const comEth = useContext(ComEthContext);
 
   const handleBalance = async () => {
-    setGetBalance(balance);
+    
     try {
       let balances = await comEth.getBalance();
       setGetBalance(balances.toString());
-      console.log("balance",balance)
     } catch (e) {
       console.log(e);
     }
@@ -20,8 +19,9 @@ const BudgetTemplate = () => {
   const handleInvest = async () => {
     setInvest(invest);
     try {
-      let invests = await comEth.getInvestmentBalance();
-      setInvest(invests);
+      let invests = await comEth.getInvestmentBalance(comEth.address);
+      setInvest(invests.toString());
+      console.log("ok", invests)
     } catch (e) {
       console.log(e);
     }
@@ -62,50 +62,52 @@ const BudgetTemplate = () => {
           Définir les budget alloué - à venir - totaux
         </Box>
         <Stack direction="row">
-          <Box
-            boxShadow="inner"
-            onChange={handleBalance}
-            fontWeight="bold"
-            fontSize={{ base: "sm", sm: "md" }}
-            backgroundColor="teal.400"
-            w={{ sm: "80%", lg: "90%" }}
-            p="0.5rem"
-            mb="2rem"
-            rounded="lg"
-          >
-            Get Balance getBalance : {balance}
-          </Box>
-          <Button
-            backgroundColor="whiteAlpha.300"
-            _hover={{ bg: "#21bdbf" }}
-            fontSize={{ base: "sm", sm: "md" }}
-            m="10rem"
-          >
-            Chercher
-          </Button>
+        <Box
+          boxShadow="inner"
+          
+          fontWeight="bold"
+          fontSize={{base:"sm",sm:"md"}}
+          backgroundColor="teal.400"
+          w={{sm:"80%", lg:"90%"}}
+          p="0.5rem"
+          mb="2rem"
+          rounded="lg"
+        >
+          Get Balance getBalance : {balance}
+        </Box>
+        <Button
+        onClick={handleBalance}
+                backgroundColor="whiteAlpha.300"
+                _hover={{ bg: "#21bdbf" }}
+                fontSize={{base:"sm",sm:"md"}}
+                m="10rem"
+              >
+                Chercher
+              </Button>
         </Stack>
         <Stack direction="row">
-          <Box
-            boxShadow="inner"
-            onChange={handleInvest}
-            fontWeight="bold"
-            fontSize={{ base: "sm", sm: "md" }}
-            backgroundColor="teal.400"
-            w={{ sm: "80%", lg: "90%" }}
-            p="0.5rem"
-            rounded="lg"
-            s
-          >
-            getInvestmentBalance : {invest}
-          </Box>
-          <Button
-            backgroundColor="whiteAlpha.300"
-            fontSize={{ base: "sm", sm: "md" }}
-            _hover={{ bg: "#21bdbf" }}
-          >
-            Chercher
-          </Button>
-        </Stack>
+        <Box
+          boxShadow="inner"
+          
+          fontWeight="bold"
+          fontSize={{base:"sm",sm:"md"}}
+          backgroundColor="teal.400"
+          w={{sm:"80%", lg:"90%"}}
+          p="0.5rem"
+          rounded="lg"
+          s
+        >
+          getInvestmentBalance : {invest}
+        </Box>
+        <Button
+        onClick={handleInvest}
+                backgroundColor="whiteAlpha.300"
+                fontSize={{base:"sm",sm:"md"}}
+                _hover={{ bg: "#21bdbf" }}
+              >
+                Chercher
+              </Button>
+      </Stack>
       </Box>
     </>
   );
