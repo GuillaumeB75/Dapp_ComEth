@@ -2,6 +2,8 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import NavInfoOnly from "../organisms/NavInfoOnly";
 import InfoTemplate from "../templates/InfoTemplate";
+import UseEffect from "../atoms/UseEffect";
+
 
 const Info = () => {
   return (
@@ -13,6 +15,7 @@ const Info = () => {
       >
         <NavInfoOnly />
         <InfoTemplate />
+        <UseEffect />
       </Box>
     </>
   );

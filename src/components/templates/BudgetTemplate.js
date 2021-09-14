@@ -12,6 +12,7 @@ const BudgetTemplate = () => {
     try {
       let balances = await comEth.getBalance();
       setGetBalance(balances.toString());
+      console.log("ok", balances.toString())
     } catch (e) {
       console.log(e);
     }
@@ -21,7 +22,7 @@ const BudgetTemplate = () => {
     try {
       let invests = await comEth.getInvestmentBalance(comEth.address);
       setInvest(invests.toString());
-      console.log("ok", invests)
+      console.log("ok", invests.toString())
     } catch (e) {
       console.log(e);
     }
@@ -31,7 +32,7 @@ const BudgetTemplate = () => {
       <Center>
         <Heading
           ml={{ md: "6rem" }}
-          mt={{ base: "3rem", sm: "5rem", lg: "8rem" }}
+          mt={{ base: "2rem", sm: "1rem", lg: "2rem" }}
           textAlign="center"
           fontSize="4xl"
           w={{ sm: "70%" }}
@@ -45,7 +46,7 @@ const BudgetTemplate = () => {
         ml={{ base: "1rem", sm: "1rem", md: "14rem", lg: "24rem" }}
         mr={{ base: "1rem", sm: "1rem" }}
         p="2rem"
-        mt={{ base: "3rem", sm: "6rem" }}
+        mt={{ base: "1rem", sm: "2rem", md: "2rem", lg: "2rem" }}
         rounded="md"
         backgroundColor="blackAlpha.200"
         w={{ md: "55%", lg: "45%", xl: "30%" }}
@@ -73,7 +74,7 @@ const BudgetTemplate = () => {
           mb="2rem"
           rounded="lg"
         >
-          Get Balance getBalance : {balance}
+            Pot Commun : {balance / 10**18} ETH
         </Box>
         <Button
         onClick={handleBalance}
@@ -97,7 +98,7 @@ const BudgetTemplate = () => {
           rounded="lg"
           s
         >
-          getInvestmentBalance : {invest}
+          Investissement personnel : {invest / 10**18} ETH
         </Box>
         <Button
         onClick={handleInvest}

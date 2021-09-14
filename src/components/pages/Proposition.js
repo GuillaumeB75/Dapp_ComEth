@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import NavLat from "../organisms/NavLat";
 import PropositionTemplate from "../templates/PropositionTemplate";
+import UseEffect from "../atoms/UseEffect";
 
 const Proposition = () => {
   return (
@@ -14,6 +15,7 @@ const Proposition = () => {
       >
         <NavLat />
         <PropositionTemplate />
+        <UseEffect />
       </Box>
     </>
   );

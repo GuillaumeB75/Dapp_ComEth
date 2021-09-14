@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import { Circle, Center, useToast} from "@chakra-ui/react";
 import { ComEthContext } from "../../context/ComEthContext";
 import { Web3Context } from "web3-hooks";
@@ -8,17 +8,9 @@ const AddUserAndPay = () => {
   const comEth = useContext(ComEthContext);
   const toast = useToast();
 
-
-  const handleAddUser = async () => {
+  const handleAddUser = async (isLoadingAd) => {
     try {
       await comEth.addUser();
-      toast({
-        title: "Vous êtes un utilisateur de ComEth",
-        description: `Félicitation, bienvenue dans votre ComEth`, // hash de la transac
-        status: "success",
-        duration: 2000,
-        isClosable: true,
-      });
     } catch (e) {
       if (e.code === 4001) {
         toast({
@@ -28,31 +20,24 @@ const AddUserAndPay = () => {
           duration: 4000,
           isClosable: true,
         });
-      }
-      if (e.code === 32603) {
+      }else {
         toast({
           title: "Vous faites déjà partie de la ComEth",
-          description: e.message,
+          description: "Vous êtes déjà un membre à part entière de cette ComEth !",
           status: "error",
-          duration: 400,
+          duration: 4000,
           isClosable: true,
         });
       }
       console.log(e.error);
     }
   };
-  const handlePay = async () => {
+  const handleClickPay = async () => {
+   const get = await comEth.getAmountToBePaid(web3State.account);
+   console.log(get.toString());
     try {
-
       const get = await comEth.getAmountToBePaid(web3State.account)
       await comEth.pay({value : get._hex});
-      toast({
-        title: "Vous êtes régularisé",
-        description: `Transaction hash: ${get.hash}`, // hash de la transac
-        status: "success",
-        duration: 2000,
-        isClosable: true,
-      });
     } catch (e) {
       if (e.code === 4001) {
         toast({
@@ -62,41 +47,43 @@ const AddUserAndPay = () => {
           duration: 4000,
           isClosable: true,
         });
-      }
-      if (e.code === 32603) {
+      } else {
         toast({
           title: "Vous avez déjà régularisé votre situation pour ce moi",
-          description: e.message,
+          description: "Vous avez déjà payé, attendez le moi prochain avant de régulariser votre situation",
           status: "error",
-          duration: 400,
+          duration: 4000,
           isClosable: true,
         });
       }
       console.log(e.error);
     }
   };
+
 
   return (
     <>
       <Center>
         <Circle
           onClick={handleAddUser}
-          backgroundColor="red"
-          w="25%"
+          backgroundColor="blackAlpha.300"
+          w="20%"
           mr="2rem"
+          mt="2rem"
           p="1rem"
           textAlign="center"
           fontWeight="bold"
           _hover={{ bg: "#1e3b45" }}
         >
           {" "}
-          Se rajouter dans la ComEth
+          Se rajouter
         </Circle>
         <Circle
-          onClick={handlePay}
+          onClick={handleClickPay}
           w="20%"
-          backgroundColor="green"
+          backgroundColor="blackAlpha.300"
           p="1rem"
+          mt="2rem"
           textAlign="center"
           fontWeight="bold"
           _hover={{ bg: "#1e3b45" }}

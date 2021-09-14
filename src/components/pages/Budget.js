@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import NavInfoOnly from "../organisms/NavInfoOnly";
 import BudgetTemplate from "../templates/BudgetTemplate";
+import UseEffect from "../atoms/UseEffect";
 
 const Budget = () => {
   return (
@@ -14,6 +15,7 @@ const Budget = () => {
       >
         <NavInfoOnly />
         <BudgetTemplate />
+        <UseEffect />
       </Box>
     </>
   );

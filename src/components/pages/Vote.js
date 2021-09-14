@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import NavLat from "../organisms/NavLat";
 import VoteTemplate from "../templates/VoteTemplate";
+import UseEffect from "../atoms/UseEffect";
 
 const Vote = () => {
   return (
@@ -14,6 +15,7 @@ const Vote = () => {
       >
         <NavLat />
         <VoteTemplate />
+        <UseEffect />
       </Box>
     </>
   );

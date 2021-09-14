@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import NavInfoOnly from "../organisms/NavInfoOnly";
 import PeopleTemplate from "../templates/PeopleTemplate";
+import UseEffect from "../atoms/UseEffect";
 
 const People = () => {
   return (
@@ -14,6 +15,7 @@ const People = () => {
       >
         <NavInfoOnly />
         <PeopleTemplate />
+        <UseEffect />
       </Box>
     </>
   );
