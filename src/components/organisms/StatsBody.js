@@ -159,7 +159,7 @@ const StatsBody = () => {
             fontWeight="bold"
             mb="2%"
           >
-            Créeé à : {proposal.createdAt}
+            Créée à : {proposal.createdAt}
           </Box>
           <Box
             p="1%"
@@ -213,7 +213,7 @@ const StatsBody = () => {
             rounded="lg"
             fontWeight="bold"
           >
-            nombre de votes négatifs : {proposal.nbNo}
+            Nombre de votes négatifs : {proposal.nbNo}
           </Box>
         </Box>
       </Center>
