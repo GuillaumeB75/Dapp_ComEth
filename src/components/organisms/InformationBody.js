@@ -48,7 +48,7 @@ const InformationBody = () => {
             backgroundColor="#2ac9c7"
             mb={{ base: "25%", sm: "25%" }}
           >
-            Vous trouverez ici les budgets utilisés.
+            Vous trouverez ici les budgets en cours dans votre communauté.
           </Box>{" "}
           <BudgetButton />
         </Box>
