@@ -29,7 +29,7 @@ const InformationBody = () => {
             backgroundColor="#2ac9c7"
             mb={{ base: "25%", sm: "25%" }}
           >
-            Ici sont les proposition déjà voter avec leurs paramettres
+            Ici se trouvent les propositions déjà votées ainsi que leurs paramètres.
           </Box>
           <StatsButton />
         </Box>
@@ -48,7 +48,7 @@ const InformationBody = () => {
             backgroundColor="#2ac9c7"
             mb={{ base: "25%", sm: "25%" }}
           >
-            Ici c'est pour voir les budgets utilisé et totaux
+            Vous trouverez ici les budgets utilisés.
           </Box>{" "}
           <BudgetButton />
         </Box>
@@ -67,8 +67,8 @@ const InformationBody = () => {
             backgroundColor="#2ac9c7"
             mb={{ base: "25%", sm: "25%" }}
           >
-            Ici c'est pour voir qui est actif, qui est banni, qui fait partie de
-            ta ComEth
+            Vous verrez ici qui est actif, qui est banni et qui fait partie de
+            votre ComEth.
           </Box>
           <PeopleButton />
         </Box>

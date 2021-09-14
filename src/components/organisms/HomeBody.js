@@ -31,7 +31,7 @@ const HomeBody = () => {
             backgroundColor="teal.400"
             mb={{ base: "25%", sm: "25%" }}
           >
-            Venez voter les propositions déjà suggérer par votre groupe ComEth
+            Venez voter les propositions déjà suggérées par votre groupe ComEth
           </Box>
           <VoteButton />
         </Box>
@@ -50,7 +50,7 @@ const HomeBody = () => {
             backgroundColor="teal.400"
             mb={{ base: "25%", sm: "37%", lg: "25%" }}
           >
-            Soumettez vos propres propositions à faire voter à votre groupe
+            Soumettez vos propositions que vous souhaitez faire voter par votre groupe
           </Box>{" "}
           <ProposButton />
         </Box>
@@ -69,7 +69,7 @@ const HomeBody = () => {
             backgroundColor="teal.400"
             mb={{ base: "25%", sm: "23%", lg: "25%" }}
           >
-            Retrouvez vos informations, statistique, proposition déjà voter ici
+            Retrouvez ici vos informations, statistiques et propositions déjà votées.
           </Box>
           <InfoButton />
         </Box>

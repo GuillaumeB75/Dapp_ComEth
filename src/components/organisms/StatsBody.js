@@ -69,11 +69,11 @@ const StatsBody = () => {
               fontWeight="bold"
               textAlign="center"
             >
-              Dernière proposition voter/ou à voter
+              Dernière proposition votée /ou à voter
             </Box>
           </Center>
           <Box fontWeight="bold" textAlign="center" m="3%">
-            Rechercher avec l'id de la proposition
+            Rechercher une proposition avec son ID
           </Box>
           <Center>
             <Box mr="1rem" ml="1.5rem">
@@ -148,7 +148,7 @@ const StatsBody = () => {
             fontWeight="bold"
             mb="2%"
           >
-            title : {proposal.title}
+            Intitulé : {proposal.title}
           </Box>
           <Box
             p="1%"
@@ -159,7 +159,7 @@ const StatsBody = () => {
             fontWeight="bold"
             mb="2%"
           >
-            createdAt : {proposal.createdAt}
+            Créeé à : {proposal.createdAt}
           </Box>
           <Box
             p="1%"
@@ -170,7 +170,7 @@ const StatsBody = () => {
             fontWeight="bold"
             mb="2%"
           >
-            author : {proposal.autor}
+            Auteur : {proposal.autor}
           </Box>
           <Box
             p="1%"
@@ -181,7 +181,7 @@ const StatsBody = () => {
             fontWeight="bold"
             mb="2%"
           >
-            paiment receiver : {proposal.receiver}
+            Destinataire du paiement : {proposal.receiver}
           </Box>
           <Box
             p="1%"
@@ -192,7 +192,7 @@ const StatsBody = () => {
             fontWeight="bold"
             mb="2%"
           >
-            amount : {proposal.amount / 10 ** 18} ETH
+            Montant : {proposal.amount / 10 ** 18} ETH
           </Box>
           <Box
             p="1%"
@@ -203,7 +203,7 @@ const StatsBody = () => {
             fontWeight="bold"
             mb="2%"
           >
-            nombre de votes validant : {proposal.nbYes}
+            Nombre de votes positifs : {proposal.nbYes}
           </Box>
           <Box
             p="1%"
@@ -213,7 +213,7 @@ const StatsBody = () => {
             rounded="lg"
             fontWeight="bold"
           >
-            nombre de votes refusant : {proposal.nbNo}
+            nombre de votes négatifs : {proposal.nbNo}
           </Box>
         </Box>
       </Center>

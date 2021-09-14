@@ -48,7 +48,7 @@ const BudgetBody = () => {
             mb="2rem"
             rounded="lg"
           >
-            Définir les budget alloué - à venir - totaux
+            Définir les budgets alloués - à venir - totaux
           </Box>
           <Stack direction="row">
             <Box

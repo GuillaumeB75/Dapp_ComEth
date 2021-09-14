@@ -12,7 +12,7 @@ const PeopleTemplate = () => {
           fontSize={{ base: "40px", md: "4xl" }}
           fontFamily="mono"
         >
-          Membre de ma ComEhnauté
+          Membres de votre ComEth
         </Heading>
       </Center>
       <PoepleBudget />

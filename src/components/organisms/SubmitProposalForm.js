@@ -93,7 +93,7 @@ const SubmitProposalForm = () => {
           mt={{ base: "1rem", sm: "2rem", md: "2rem", lg: "2rem" }}
         >
           <FormLabel fontWeight="bold">
-            Titre de proposition proposition
+            Intitulé de la proposition
           </FormLabel>
           <Input
             onChange={handleChangeProposition}
@@ -107,7 +107,7 @@ const SubmitProposalForm = () => {
           />
 
           <FormLabel p="-0" fontWeight="bold">
-            Choisir votre limie de temps
+            Choisir votre durée de temps de vote
           </FormLabel>
           <Select
             onChange={handleChangeTimeLimit}
@@ -123,7 +123,7 @@ const SubmitProposalForm = () => {
             <option value="2419200">4 semaines</option>
           </Select>
 
-          <FormLabel fontWeight="bold">Amount</FormLabel>
+          <FormLabel fontWeight="bold">Montant</FormLabel>
           <Input
             onChange={handleChangeAmount}
             backgroundColor="teal.600"
@@ -133,7 +133,7 @@ const SubmitProposalForm = () => {
             placeholder="0,75"
             margin="1rem"
           />
-          <FormLabel fontWeight="bold">Paiement reveiver</FormLabel>
+          <FormLabel fontWeight="bold">Destinataire du paiement</FormLabel>
           <Input
             onChange={handleChangeAddressReceive}
             backgroundColor="teal.600"
@@ -153,7 +153,7 @@ const SubmitProposalForm = () => {
               onClick={handleSubmitAll}
               _hover={{ bg: "#21bdbf" }}
             >
-              Valider
+              Validez
             </Circle>
           </Center>
         </Box>

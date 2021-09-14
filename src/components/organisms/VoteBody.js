@@ -79,7 +79,7 @@ const VoteBody = () => {
           fontWeight="bold"
           mt={{ base: "1rem", sm: "2rem", md: "2rem", lg: "2rem" }}
         >
-          ID de la proposition*
+          ID de la proposition
           <Input
             w="15%"
             onChange={handleChangeId}

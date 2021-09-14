@@ -13,7 +13,7 @@ const HomeTemplate = () => {
           fontSize={{ base: "52px", md: "4xl" }}
           fontFamily="mono"
         >
-          Home ComEth
+          Bienvenue dans votre ComEth
         </Heading>
       </Center>
       <ComEthAddressPopover />

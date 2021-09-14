@@ -60,7 +60,7 @@ const LandingPageTemplate = () => {
             _hover={{ bg: "#42daf5" }}
             _selected={{ bg: "#055c6b" }}
           >
-            Create a Community
+            Créez votre communauté
           </Circle>
         </Link>
 
@@ -77,7 +77,7 @@ const LandingPageTemplate = () => {
             _hover={{ bg: "#42daf5" }}
             _selected={{ bg: "#055c6b" }}
           >
-            Join a Community
+            Rejoignez une communauté
           </Circle>
         </Link>
       </Center>

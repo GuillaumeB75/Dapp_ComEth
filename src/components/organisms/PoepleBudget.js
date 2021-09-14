@@ -42,13 +42,13 @@ const PoepleBody = () => {
             fontWeight="bold"
             m="1rem"
           >
-            Activités au seint de la ComEth
+            Activités au sein de la ComEth
           </Box>
         </Center>
         <Box>
           <Box ml={{ md: "1rem" }}>
             <Box padding="1rem" fontWeight="black">
-              Voir qui est Actif :
+              Voir qui est actif :
             </Box>
             <Stack direction="row">
               <Input
