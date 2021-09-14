@@ -14,7 +14,7 @@ const AddUserAndPay = () => {
     } catch (e) {
       if (e.code === 4001) {
         toast({
-          title: "Transaction refusé à la signature",
+          title: "Transaction refusée à la signature",
           description: e.message,
           status: "error",
           duration: 4000,
