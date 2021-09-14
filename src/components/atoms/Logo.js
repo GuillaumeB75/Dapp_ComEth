@@ -15,7 +15,7 @@ const Logo = () => {
           textColor="whiteAlpha.400"
           _selected={{ bg: "#17d4c7" }}
         >
-          <Link to="/home">Logo</Link>
+          <Link to="/home">Home</Link>
         </Circle>
       </Center>
     </>
