@@ -117,7 +117,7 @@ const UseEffect = () => {
       const cb = (id, descriptions) => {
         toast({
           title: "Proposition créée",
-          description: `id de la proposition: ${id} . Desciprion : ${descriptions}`,
+          description: `id de la proposition: ${id} . Description : ${descriptions}`,
           status: "info",
           position: "top-right",
           padding: "1rem",
