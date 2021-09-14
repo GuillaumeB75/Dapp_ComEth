@@ -21,10 +21,10 @@ const LandingPageTemplate = () => {
         <Heading>
           <Text
             textShadow="3px 3px #43A2F7"
-            mt={{sm:"11rem", lg:"10rem"}}
-            fontSize={{base:"73px",sm:"100px",lg:"100px"}}
+            mt={{ sm: "11rem", lg: "10rem" }}
+            fontSize={{ base: "73px", sm: "100px", lg: "100px" }}
             color="blue.700"
-            margin={{base:"7rem",sm:"4rem"}}
+            margin={{ base: "7rem", sm: "4rem" }}
           >
             ComEth
           </Text>
@@ -41,7 +41,7 @@ const LandingPageTemplate = () => {
           textAlign="center"
           fontStyle="italic"
           fontWeight="bold"
-          fontSize={{base:"22px",sm:"24px",lg:"25px"}}
+          fontSize={{ base: "22px", sm: "24px", lg: "25px" }}
         >
           A new possibility to create communities and manage sharing funds
         </Text>
@@ -49,12 +49,12 @@ const LandingPageTemplate = () => {
       <Center>
         <Link to={web3State.isLogged ? "/create" : "/"}>
           <Circle
-          as="button"
-          backgroundColor="blue.500"
-          fontWeight="bold"
-          p="0.8rem"
-          m={{base:"0.8rem",sm:"1rem"}}
-            marginRight={{base:"0.5rem", md:"2rem"}}
+            as="button"
+            backgroundColor="blue.500"
+            fontWeight="bold"
+            p="0.8rem"
+            m={{ base: "0.8rem", sm: "1rem" }}
+            marginRight={{ base: "0.5rem", md: "2rem" }}
             colorScheme="blue"
             onClick={() => handleOnClickLogin()}
             _hover={{ bg: "#42daf5" }}
@@ -66,11 +66,11 @@ const LandingPageTemplate = () => {
 
         <Link to={web3State.isLogged ? "/login" : "/"}>
           <Circle
-          as="button"
-          fontWeight="bold"
-          p="1rem"
-          m={{base:"0.8rem",sm:"1rem"}}
-          backgroundColor="blue.500"
+            as="button"
+            fontWeight="bold"
+            p="1rem"
+            m={{ base: "0.8rem", sm: "1rem" }}
+            backgroundColor="blue.500"
             marginLeft="2rem"
             colorScheme="blue"
             onClick={() => handleOnClickLogin()}
@@ -80,7 +80,6 @@ const LandingPageTemplate = () => {
             Join a Community
           </Circle>
         </Link>
-       
       </Center>
       <FooterLandingPage />
     </>

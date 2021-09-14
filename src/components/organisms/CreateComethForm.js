@@ -6,10 +6,10 @@ import { ComEthFactoryContext } from "../../App";
 import { ComEthAddressContext } from "../../App";
 import { useContext } from "react";
 import { Web3Context } from "web3-hooks";
-import { ethers } from 'ethers';
+import { ethers } from "ethers";
 
 const CreateComethForm = () => {
-  const [created , setCreated ] = useState(false)
+  const [created, setCreated] = useState(false);
   const [web3State] = useContext(Web3Context);
   const comEthFactory = useContext(ComEthFactoryContext);
   const { comEthAddress, setComEthAddress } = useContext(ComEthAddressContext);
@@ -20,13 +20,15 @@ const CreateComethForm = () => {
   // subscription price parametter <------------------------
   const handleChangeSubscription = (e) => {
     setSubscriptionPrice(e.target.value.toString());
-    console.log("ETH",e.target.value)
+    console.log("ETH", e.target.value);
   };
   //-------------------------------------------------------------
 
   const handleClickCreate = async () => {
     try {
-      let tx = await comEthFactory.createComEth(ethers.utils.parseEther(subscriptionPrice)); // <------------
+      let tx = await comEthFactory.createComEth(
+        ethers.utils.parseEther(subscriptionPrice)
+      ); // <------------
       await tx.wait();
       toast({
         title: "Confirmed transaction",
@@ -46,23 +48,22 @@ const CreateComethForm = () => {
         });
       }
       console.log(e);
-      
     }
   };
   useEffect(() => {
     // si simpleStorage est pas null alors
     if (comEthFactory) {
       const cb = (ComEthAddress) => {
-          setComEthAddress(ComEthAddress);
-          localStorage.setItem("AddressComEth", JSON.stringify(ComEthAddress))
-          toast({
-            title: "Votre communauté à sa propre addresse Ethereum !",
-            description: `L'addresse de votre communauté : ${ComEthAddress}`,
-            status: "info",
-            position: "top-right",
-            duration: 9000,
-            isClosable: true,
-          });
+        setComEthAddress(ComEthAddress);
+        localStorage.setItem("AddressComEth", JSON.stringify(ComEthAddress));
+        toast({
+          title: "Votre communauté à sa propre addresse Ethereum !",
+          description: `L'addresse de votre communauté : ${ComEthAddress}`,
+          status: "info",
+          position: "top-right",
+          duration: 9000,
+          isClosable: true,
+        });
       };
       // ecouter sur l'event DataSet
       comEthFactory.on("ComEthCreated", cb);
@@ -113,8 +114,9 @@ const CreateComethForm = () => {
             mt="3rem"
             rounded="md"
             backgroundColor="teal.400"
-          ><Text textAlign="center" mb={{base:"0.3rem", sm:"0"}}>
-            Montant de la souscription
+          >
+            <Text textAlign="center" mb={{ base: "0.3rem", sm: "0" }}>
+              Montant de la souscription
             </Text>
             <Input
               onChange={handleChangeSubscription}

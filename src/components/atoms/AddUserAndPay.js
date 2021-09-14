@@ -1,5 +1,5 @@
-import React, { useContext} from "react";
-import { Circle, Center, useToast} from "@chakra-ui/react";
+import React, { useContext } from "react";
+import { Circle, Center, useToast } from "@chakra-ui/react";
 import { ComEthContext } from "../../context/ComEthContext";
 import { Web3Context } from "web3-hooks";
 
@@ -20,10 +20,11 @@ const AddUserAndPay = () => {
           duration: 4000,
           isClosable: true,
         });
-      }else {
+      } else {
         toast({
           title: "Vous faites déjà partie de la ComEth",
-          description: "Vous êtes déjà un membre à part entière de cette ComEth !",
+          description:
+            "Vous êtes déjà un membre à part entière de cette ComEth !",
           status: "error",
           duration: 4000,
           isClosable: true,
@@ -33,11 +34,11 @@ const AddUserAndPay = () => {
     }
   };
   const handleClickPay = async () => {
-   const get = await comEth.getAmountToBePaid(web3State.account);
-   console.log(get.toString());
+    const get = await comEth.getAmountToBePaid(web3State.account);
+    console.log(get.toString());
     try {
-      const get = await comEth.getAmountToBePaid(web3State.account)
-      await comEth.pay({value : get._hex});
+      const get = await comEth.getAmountToBePaid(web3State.account);
+      await comEth.pay({ value: get._hex });
     } catch (e) {
       if (e.code === 4001) {
         toast({
@@ -50,7 +51,8 @@ const AddUserAndPay = () => {
       } else {
         toast({
           title: "Vous avez déjà régularisé votre situation pour ce moi",
-          description: "Vous avez déjà payé, attendez le moi prochain avant de régulariser votre situation",
+          description:
+            "Vous avez déjà payé, attendez le moi prochain avant de régulariser votre situation",
           status: "error",
           duration: 4000,
           isClosable: true,
@@ -60,15 +62,14 @@ const AddUserAndPay = () => {
     }
   };
 
-
   return (
     <>
       <Center>
         <Circle
           onClick={handleAddUser}
           backgroundColor="blackAlpha.300"
-          w={{base:"40%",md:"20%"}}
-          mr={{base:"0.5rem",md:"2rem"}}
+          w={{ base: "40%", md: "20%" }}
+          mr={{ base: "0.5rem", md: "2rem" }}
           mt="2rem"
           p="1rem"
           textAlign="center"
@@ -80,7 +81,7 @@ const AddUserAndPay = () => {
         </Circle>
         <Circle
           onClick={handleClickPay}
-          w={{base:"50%",md:"20%"}}
+          w={{ base: "50%", md: "20%" }}
           backgroundColor="blackAlpha.300"
           p="1rem"
           mt="2rem"

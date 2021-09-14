@@ -2,7 +2,6 @@ import { Center, Heading } from "@chakra-ui/react";
 import BudgetBody from "../organisms/BudgetBody";
 
 const BudgetTemplate = () => {
-
   return (
     <>
       <Center>
@@ -10,7 +9,7 @@ const BudgetTemplate = () => {
           ml={{ md: "6rem" }}
           mt={{ base: "2rem", sm: "3rem", lg: "6rem" }}
           textAlign="center"
-          fontSize={{base:"40px", md:"4xl"}}
+          fontSize={{ base: "40px", md: "4xl" }}
           w={{ sm: "70%" }}
           fontFamily="mono"
         >

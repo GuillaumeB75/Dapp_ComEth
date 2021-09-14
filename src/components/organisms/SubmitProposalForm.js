@@ -25,7 +25,7 @@ const SubmitProposalForm = () => {
     target: "",
     sum: 0,
   });
-  
+
   useEffect(() => {
     console.log(proposition);
   }, [proposition]);
@@ -67,8 +67,8 @@ const SubmitProposalForm = () => {
   const handleSubmitAll = async () => {
     try {
       //fonction ComEth submitProposal a remplir grace au form voteOption,
-      const {  title, timeLimit, target, sum } = proposition;
-       await comEth.submitProposal(
+      const { title, timeLimit, target, sum } = proposition;
+      await comEth.submitProposal(
         // voteOption,
         title,
         timeLimit,

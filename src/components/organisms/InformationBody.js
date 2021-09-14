@@ -14,7 +14,13 @@ const InformationBody = () => {
         mt={{ base: "1rem", sm: "2rem", md: "2rem", lg: "2rem" }}
         ml={{ base: "1rem", sm: "3rem", md: "10rem", lg: "12rem" }}
       >
-        <Box rounded="md" textAlign="center" p="2rem" backgroundColor="blackAlpha.200" height="90%">
+        <Box
+          rounded="md"
+          textAlign="center"
+          p="2rem"
+          backgroundColor="blackAlpha.200"
+          height="90%"
+        >
           <Box
             fontWeight="bold"
             boxShadow="inner"
@@ -27,7 +33,13 @@ const InformationBody = () => {
           </Box>
           <StatsButton />
         </Box>
-        <Box rounded="md" textAlign="center" p="2rem" backgroundColor="blackAlpha.200" height="90%">
+        <Box
+          rounded="md"
+          textAlign="center"
+          p="2rem"
+          backgroundColor="blackAlpha.200"
+          height="90%"
+        >
           <Box
             fontWeight="bold"
             boxShadow="inner"
@@ -40,7 +52,13 @@ const InformationBody = () => {
           </Box>{" "}
           <BudgetButton />
         </Box>
-        <Box rounded="md" textAlign="center" p="2rem" backgroundColor="blackAlpha.200" height="90%">
+        <Box
+          rounded="md"
+          textAlign="center"
+          p="2rem"
+          backgroundColor="blackAlpha.200"
+          height="90%"
+        >
           <Box
             fontWeight="bold"
             boxShadow="inner"

@@ -4,7 +4,6 @@ import NavInfoOnly from "../organisms/NavInfoOnly";
 import InfoTemplate from "../templates/InfoTemplate";
 import UseEffect from "../atoms/UseEffect";
 
-
 const Info = () => {
   return (
     <>
