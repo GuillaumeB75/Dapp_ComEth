@@ -2,11 +2,6 @@ export const ComEthAbi = [
   {
     inputs: [
       {
-        internalType: "address",
-        name: "comEthOwner_",
-        type: "address",
-      },
-      {
         internalType: "uint256",
         name: "subscriptionPrice_",
         type: "uint256",

@@ -28,7 +28,7 @@ const Dapp = ({ comEthAdr }) => {
   return (
     <>
     <Box minH="100vh">
-      {window.location.pathname === "/" ? <LandingHeader /> : <MainHeader />}
+      {["/", "/create", "/login"].includes(window.location.pathname) ? <LandingHeader /> : <MainHeader />}
       <Switch>
         <Route exact path="/" component={LandingPage}>
           <LandingPage />

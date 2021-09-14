@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import { Box, Circle, useToast, Input, Center } from "@chakra-ui/react";
+import { Box, Circle, useToast, Input, Center, Text } from "@chakra-ui/react";
 import { Redirect } from "react-router-dom";
 
 import { ComEthFactoryContext } from "../../App";
@@ -52,22 +52,17 @@ const CreateComethForm = () => {
   useEffect(() => {
     // si simpleStorage est pas null alors
     if (comEthFactory) {
-      const cb = (ComEthAddress, ComEthOwner) => {
-        if (ComEthOwner.toLowerCase() === web3State.account.toLowerCase()) {
-          console.log("Hello", ComEthAddress);
+      const cb = (ComEthAddress) => {
           setComEthAddress(ComEthAddress);
+          localStorage.setItem("AddressComEth", JSON.stringify(ComEthAddress))
           toast({
-            title: "Event ComEthCreated",
-            description: `comEthOwner: ${ComEthOwner} comEthAddress: ${ComEthAddress}`,
+            title: "Votre communauté à sa propre addresse Ethereum !",
+            description: `L'addresse de votre communauté : ${ComEthAddress}`,
             status: "info",
             position: "top-right",
             duration: 9000,
             isClosable: true,
           });
-        }
-        console.log(
-          `comEthOwner: ${ComEthOwner} comEthAddress: ${ComEthAddress}`
-        );
       };
       // ecouter sur l'event DataSet
       comEthFactory.on("ComEthCreated", cb);
@@ -107,7 +102,7 @@ const CreateComethForm = () => {
           p="0.5rem"
           rounded="md"
         >
-          Explication sur la création d'une communauté Ethereum
+          La souscription est le montant de l'adhésion mensuelle en Ethereum
         </Box>
         <Center>
           <Box
@@ -118,15 +113,16 @@ const CreateComethForm = () => {
             mt="3rem"
             rounded="md"
             backgroundColor="teal.400"
-          >
-            Subscription Price{" "}
+          ><Text textAlign="center" mb={{base:"0.3rem", sm:"0"}}>
+            Montant de la souscription
+            </Text>
             <Input
               onChange={handleChangeSubscription}
               ml="2rem"
               mr="0.5rem"
               w="25%"
-              placeHolder="10"
-            ></Input>{" "}
+              placeholder="10"
+            ></Input>
             ETH
           </Box>
         </Center>
@@ -142,7 +138,7 @@ const CreateComethForm = () => {
           p="0.5em"
           margin="2rem"
         >
-          Create your account
+          Créez votre ComEth
         </Circle>
       </Box>
       {created && <Redirect exact from="/create" to="/home" />}

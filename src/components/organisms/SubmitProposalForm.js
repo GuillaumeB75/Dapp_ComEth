@@ -88,7 +88,7 @@ const SubmitProposalForm = () => {
           boxShadow="lg"
           backgroundColor="blackAlpha.200"
           padding="2rem"
-          w={{ sm: "86%", md: "43rem", lg: "45rem" }}
+          w={{ sm: "86%", md: "43rem", lg: "40rem" }}
           ml={{ sm: "0.5rem", md: "9rem" }}
           mt={{ base: "1rem", sm: "2rem", md: "2rem", lg: "2rem" }}
         >

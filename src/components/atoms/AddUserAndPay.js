@@ -67,8 +67,8 @@ const AddUserAndPay = () => {
         <Circle
           onClick={handleAddUser}
           backgroundColor="blackAlpha.300"
-          w="20%"
-          mr="2rem"
+          w={{base:"40%",md:"20%"}}
+          mr={{base:"0.5rem",md:"2rem"}}
           mt="2rem"
           p="1rem"
           textAlign="center"
@@ -80,7 +80,7 @@ const AddUserAndPay = () => {
         </Circle>
         <Circle
           onClick={handleClickPay}
-          w="20%"
+          w={{base:"50%",md:"20%"}}
           backgroundColor="blackAlpha.300"
           p="1rem"
           mt="2rem"
