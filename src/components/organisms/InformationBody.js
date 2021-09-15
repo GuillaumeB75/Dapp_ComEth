@@ -67,8 +67,7 @@ const InformationBody = () => {
             backgroundColor="#2ac9c7"
             mb={{ base: "25%", sm: "25%" }}
           >
-            Vous verrez ici qui est actif, qui est banni et qui fait partie de
-            votre ComEth.
+            Vous verrez ici quel est le statut des membres de votre communauté.
           </Box>
           <PeopleButton />
         </Box>
