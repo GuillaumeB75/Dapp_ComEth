@@ -29,7 +29,8 @@ const InformationBody = () => {
             backgroundColor="#2ac9c7"
             mb={{ base: "25%", sm: "25%" }}
           >
-            Ici se trouvent les propositions déjà votées ainsi que leurs paramètres.
+            Ici se trouvent les propositions déjà votées ainsi que leurs
+            paramètres.
           </Box>
           <StatsButton />
         </Box>
